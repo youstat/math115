@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 4 Methods | Math 115: Elementary Statistics</title>
+  <meta name="description" content="These are the slides I use in class. Most of the materials are obtained from our textbook: Elementary Statistics 13th edition by Mario F. Triola." />
+  <meta name="generator" content="bookdown 0.12 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 4 Methods | Math 115: Elementary Statistics" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="These are the slides I use in class. Most of the materials are obtained from our textbook: Elementary Statistics 13th edition by Mario F. Triola." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 4 Methods | Math 115: Elementary Statistics" />
+  
+  <meta name="twitter:description" content="These are the slides I use in class. Most of the materials are obtained from our textbook: Elementary Statistics 13th edition by Mario F. Triola." />
+  
+
+<meta name="author" content="Rong You" />
+
+
+<meta name="date" content="2019-08-12" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="descriptive-statistics.html">
+<link rel="next" href="applications.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Chapter 1</a><ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#welcome"><i class="fa fa-check"></i><b>1.1</b> Welcome</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#statistical-and-critical-thinking"><i class="fa fa-check"></i><b>1.2</b> Statistical and Critical Thinking</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#example-1"><i class="fa fa-check"></i><b>1.3</b> Example 1</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#example-2"><i class="fa fa-check"></i><b>1.4</b> Example 2</a></li>
+<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#statistical-thinking-procedure"><i class="fa fa-check"></i><b>1.5</b> Statistical Thinking Procedure:</a></li>
+<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#types-of-data"><i class="fa fa-check"></i><b>1.6</b> Types of Data</a></li>
+<li class="chapter" data-level="1.7" data-path="index.html"><a href="index.html#example-3"><i class="fa fa-check"></i><b>1.7</b> Example 3</a></li>
+<li class="chapter" data-level="1.8" data-path="index.html"><a href="index.html#levels-of-measurement"><i class="fa fa-check"></i><b>1.8</b> Levels of Measurement</a></li>
+<li class="chapter" data-level="1.9" data-path="index.html"><a href="index.html#summary---levels-of-measurement"><i class="fa fa-check"></i><b>1.9</b> Summary - Levels of Measurement</a></li>
+<li class="chapter" data-level="1.10" data-path="index.html"><a href="index.html#big-data-and-data-science"><i class="fa fa-check"></i><b>1.10</b> Big Data and Data Science</a></li>
+<li class="chapter" data-level="1.11" data-path="index.html"><a href="index.html#how-do-we-gather-data"><i class="fa fa-check"></i><b>1.11</b> How do we gather data?</a></li>
+<li class="chapter" data-level="1.12" data-path="index.html"><a href="index.html#how-good-a-poll-would-be"><i class="fa fa-check"></i><b>1.12</b> How good a poll would be?</a></li>
+<li class="chapter" data-level="1.13" data-path="index.html"><a href="index.html#basics-of-collecting-data"><i class="fa fa-check"></i><b>1.13</b> Basics of Collecting Data</a></li>
+<li class="chapter" data-level="1.14" data-path="index.html"><a href="index.html#observational-study-survey"><i class="fa fa-check"></i><b>1.14</b> Observational Study: Survey</a></li>
+<li class="chapter" data-level="1.15" data-path="index.html"><a href="index.html#sampling-methods"><i class="fa fa-check"></i><b>1.15</b> Sampling Methods:</a></li>
+<li class="chapter" data-level="1.16" data-path="index.html"><a href="index.html#sampling-methods-simple-random-sample"><i class="fa fa-check"></i><b>1.16</b> Sampling Methods: Simple Random Sample</a></li>
+<li class="chapter" data-level="1.17" data-path="index.html"><a href="index.html#samping-methods-systematic-sampling"><i class="fa fa-check"></i><b>1.17</b> Samping Methods: Systematic Sampling</a></li>
+<li class="chapter" data-level="1.18" data-path="index.html"><a href="index.html#sampling-methods-stratified-random-sample"><i class="fa fa-check"></i><b>1.18</b> Sampling Methods: Stratified random sample</a></li>
+<li class="chapter" data-level="1.19" data-path="index.html"><a href="index.html#sampling-methods-cluster-sampling"><i class="fa fa-check"></i><b>1.19</b> Sampling Methods: Cluster Sampling</a></li>
+<li class="chapter" data-level="1.20" data-path="index.html"><a href="index.html#sampling-methods-convenience-sampling"><i class="fa fa-check"></i><b>1.20</b> Sampling Methods: Convenience sampling</a></li>
+<li class="chapter" data-level="1.21" data-path="index.html"><a href="index.html#summary-of-sampling-methods"><i class="fa fa-check"></i><b>1.21</b> Summary of Sampling Methods</a></li>
+<li class="chapter" data-level="1.22" data-path="index.html"><a href="index.html#example-4"><i class="fa fa-check"></i><b>1.22</b> Example 4</a></li>
+<li class="chapter" data-level="1.23" data-path="index.html"><a href="index.html#bias"><i class="fa fa-check"></i><b>1.23</b> Bias</a></li>
+<li class="chapter" data-level="1.24" data-path="index.html"><a href="index.html#potential-pitfalls"><i class="fa fa-check"></i><b>1.24</b> Potential Pitfalls</a></li>
+<li class="chapter" data-level="1.25" data-path="index.html"><a href="index.html#experimental-design"><i class="fa fa-check"></i><b>1.25</b> Experimental Design</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="graphical-displas.html"><a href="graphical-displas.html"><i class="fa fa-check"></i><b>2</b> Graphical Displas</a><ul>
+<li class="chapter" data-level="2.1" data-path="graphical-displas.html"><a href="graphical-displas.html#frequency-distribution"><i class="fa fa-check"></i><b>2.1</b> Frequency Distribution</a></li>
+<li class="chapter" data-level="2.2" data-path="graphical-displas.html"><a href="graphical-displas.html#procedure-for-constructing-a-frequency-distribution"><i class="fa fa-check"></i><b>2.2</b> Procedure for Constructing a Frequency Distribution</a></li>
+<li class="chapter" data-level="2.3" data-path="graphical-displas.html"><a href="graphical-displas.html#example"><i class="fa fa-check"></i><b>2.3</b> Example</a></li>
+<li class="chapter" data-level="2.4" data-path="graphical-displas.html"><a href="graphical-displas.html#relative-frequency-distribution"><i class="fa fa-check"></i><b>2.4</b> Relative Frequency Distribution</a></li>
+<li class="chapter" data-level="2.5" data-path="graphical-displas.html"><a href="graphical-displas.html#cumulative-frequency-distribution"><i class="fa fa-check"></i><b>2.5</b> Cumulative Frequency Distribution</a></li>
+<li class="chapter" data-level="2.6" data-path="graphical-displas.html"><a href="graphical-displas.html#cumulative-relative-frequence"><i class="fa fa-check"></i><b>2.6</b> Cumulative Relative Frequence</a></li>
+<li class="chapter" data-level="2.7" data-path="graphical-displas.html"><a href="graphical-displas.html#using-frequency-distributions-to-understand-data"><i class="fa fa-check"></i><b>2.7</b> Using Frequency Distributions to Understand Data</a></li>
+<li class="chapter" data-level="2.8" data-path="graphical-displas.html"><a href="graphical-displas.html#gaps"><i class="fa fa-check"></i><b>2.8</b> Gaps</a></li>
+<li class="chapter" data-level="2.9" data-path="graphical-displas.html"><a href="graphical-displas.html#what-do-gaps-tell-us"><i class="fa fa-check"></i><b>2.9</b> What Do Gaps Tell Us?</a></li>
+<li class="chapter" data-level="2.10" data-path="graphical-displas.html"><a href="graphical-displas.html#histogram"><i class="fa fa-check"></i><b>2.10</b> Histogram</a></li>
+<li class="chapter" data-level="2.11" data-path="graphical-displas.html"><a href="graphical-displas.html#important-uses-of-a-histogram"><i class="fa fa-check"></i><b>2.11</b> Important Uses of a Histogram</a></li>
+<li class="chapter" data-level="2.12" data-path="graphical-displas.html"><a href="graphical-displas.html#example-of-a-histogram"><i class="fa fa-check"></i><b>2.12</b> Example of A Histogram</a></li>
+<li class="chapter" data-level="2.13" data-path="graphical-displas.html"><a href="graphical-displas.html#interpreting-histograms"><i class="fa fa-check"></i><b>2.13</b> Interpreting Histograms</a></li>
+<li class="chapter" data-level="2.14" data-path="graphical-displas.html"><a href="graphical-displas.html#common-distribution-shapes"><i class="fa fa-check"></i><b>2.14</b> Common Distribution Shapes</a></li>
+<li class="chapter" data-level="2.15" data-path="graphical-displas.html"><a href="graphical-displas.html#assessing-normality-with-normal-quantile-plots-q-q-plots"><i class="fa fa-check"></i><b>2.15</b> Assessing Normality with Normal Quantile Plots (Q-Q plots)</a></li>
+<li class="chapter" data-level="2.16" data-path="graphical-displas.html"><a href="graphical-displas.html#examples-of-q-q-plots"><i class="fa fa-check"></i><b>2.16</b> Examples of Q-Q plots</a></li>
+<li class="chapter" data-level="2.17" data-path="graphical-displas.html"><a href="graphical-displas.html#dotplots"><i class="fa fa-check"></i><b>2.17</b> Dotplots</a></li>
+<li class="chapter" data-level="2.18" data-path="graphical-displas.html"><a href="graphical-displas.html#stemplots-you-need-to-assign-a-key-to-read-a-stem-plot"><i class="fa fa-check"></i><b>2.18</b> Stemplots (You need to assign a key to read a stem plot)</a></li>
+<li class="chapter" data-level="2.19" data-path="graphical-displas.html"><a href="graphical-displas.html#bar-graph"><i class="fa fa-check"></i><b>2.19</b> Bar Graph</a></li>
+<li class="chapter" data-level="2.20" data-path="graphical-displas.html"><a href="graphical-displas.html#pareto-chart"><i class="fa fa-check"></i><b>2.20</b> Pareto Chart</a></li>
+<li class="chapter" data-level="2.21" data-path="graphical-displas.html"><a href="graphical-displas.html#pie-charts"><i class="fa fa-check"></i><b>2.21</b> Pie Charts</a></li>
+<li class="chapter" data-level="2.22" data-path="graphical-displas.html"><a href="graphical-displas.html#frequency-polygon"><i class="fa fa-check"></i><b>2.22</b> Frequency Polygon</a></li>
+<li class="chapter" data-level="2.23" data-path="graphical-displas.html"><a href="graphical-displas.html#graphs-that-deceive"><i class="fa fa-check"></i><b>2.23</b> Graphs That Deceive</a></li>
+<li class="chapter" data-level="2.24" data-path="graphical-displas.html"><a href="graphical-displas.html#pictographs"><i class="fa fa-check"></i><b>2.24</b> Pictographs</a></li>
+<li class="chapter" data-level="2.25" data-path="graphical-displas.html"><a href="graphical-displas.html#scatterplot-two-numerical-variables"><i class="fa fa-check"></i><b>2.25</b> Scatterplot (Two Numerical Variables)</a></li>
+<li class="chapter" data-level="2.26" data-path="graphical-displas.html"><a href="graphical-displas.html#nba"><i class="fa fa-check"></i><b>2.26</b> NBA</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html"><i class="fa fa-check"></i><b>3</b> Descriptive Statistics</a><ul>
+<li class="chapter" data-level="3.1" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#mean-or-arithmetic-mean"><i class="fa fa-check"></i><b>3.1</b> Mean (or Arithmetic Mean)</a></li>
+<li class="chapter" data-level="3.2" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#notations"><i class="fa fa-check"></i><b>3.2</b> Notations</a></li>
+<li class="chapter" data-level="3.3" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#mean-example"><i class="fa fa-check"></i><b>3.3</b> Mean-Example</a></li>
+<li class="chapter" data-level="3.4" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#median"><i class="fa fa-check"></i><b>3.4</b> Median</a></li>
+<li class="chapter" data-level="3.5" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#median-example"><i class="fa fa-check"></i><b>3.5</b> Median-Example</a></li>
+<li class="chapter" data-level="3.6" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#which-one-do-you-use-mean-or-median"><i class="fa fa-check"></i><b>3.6</b> Which one do you use? Mean or Median?</a></li>
+<li class="chapter" data-level="3.7" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#which-one-do-you-use-mean-or-median-1"><i class="fa fa-check"></i><b>3.7</b> Which one do you use? Mean or Median?</a></li>
+<li class="chapter" data-level="3.8" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#mode"><i class="fa fa-check"></i><b>3.8</b> Mode</a></li>
+<li class="chapter" data-level="3.9" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#mode-example"><i class="fa fa-check"></i><b>3.9</b> Mode-Example</a></li>
+<li class="chapter" data-level="3.10" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#midrange"><i class="fa fa-check"></i><b>3.10</b> Midrange</a></li>
+<li class="chapter" data-level="3.11" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#round-off-rules-for-measures-of-center"><i class="fa fa-check"></i><b>3.11</b> Round-Off Rules for Measures of Center</a></li>
+<li class="chapter" data-level="3.12" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#calculating-a-weighted-mean"><i class="fa fa-check"></i><b>3.12</b> Calculating a Weighted Mean</a></li>
+<li class="chapter" data-level="3.13" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#more-examples-about-finding-the-means"><i class="fa fa-check"></i><b>3.13</b> More Examples About Finding The Means</a></li>
+<li class="chapter" data-level="3.14" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#measures-of-variation"><i class="fa fa-check"></i><b>3.14</b> Measures of Variation</a></li>
+<li class="chapter" data-level="3.15" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#round-off-rule-for-measures-of-variation"><i class="fa fa-check"></i><b>3.15</b> Round-off Rule for Measures of Variation</a></li>
+<li class="chapter" data-level="3.16" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#range"><i class="fa fa-check"></i><b>3.16</b> Range</a></li>
+<li class="chapter" data-level="3.17" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#standard-deviation"><i class="fa fa-check"></i><b>3.17</b> Standard Deviation</a></li>
+<li class="chapter" data-level="3.18" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#formula"><i class="fa fa-check"></i><b>3.18</b> Formula</a></li>
+<li class="chapter" data-level="3.19" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#interpretation-of-standard-deviation"><i class="fa fa-check"></i><b>3.19</b> Interpretation of Standard Deviation</a></li>
+<li class="chapter" data-level="3.20" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#range-rule-of-thumb-for-understanding-standard-deviation"><i class="fa fa-check"></i><b>3.20</b> Range Rule of Thumb for Understanding Standard Deviation</a></li>
+<li class="chapter" data-level="3.21" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#range-rule-of-thumb-for-estimating-a-value-of-the-standard-deviation-s"><i class="fa fa-check"></i><b>3.21</b> Range Rule of Thumb for Estimating a Value of the Standard Deviation s</a></li>
+<li class="chapter" data-level="3.22" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#variance-of-a-sample-and-a-population"><i class="fa fa-check"></i><b>3.22</b> Variance of a Sample and a Population</a></li>
+<li class="chapter" data-level="3.23" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#notations-1"><i class="fa fa-check"></i><b>3.23</b> Notations</a></li>
+<li class="chapter" data-level="3.24" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#the-empirical-rule"><i class="fa fa-check"></i><b>3.24</b> The Empirical Rule</a></li>
+<li class="chapter" data-level="3.25" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#chebyshevs-theorem"><i class="fa fa-check"></i><b>3.25</b> Chebyshev’s Theorem</a></li>
+<li class="chapter" data-level="3.26" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#extra-example"><i class="fa fa-check"></i><b>3.26</b> Extra Example</a></li>
+<li class="chapter" data-level="3.27" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#measures-of-relative-standing-and-boxplots"><i class="fa fa-check"></i><b>3.27</b> Measures of Relative Standing and Boxplots</a></li>
+<li class="chapter" data-level="3.28" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#z-scores"><i class="fa fa-check"></i><b>3.28</b> z Scores</a></li>
+<li class="chapter" data-level="3.29" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#important-properties-of-z-scores"><i class="fa fa-check"></i><b>3.29</b> Important Properties of z Scores</a></li>
+<li class="chapter" data-level="3.30" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#examples"><i class="fa fa-check"></i><b>3.30</b> Examples</a></li>
+<li class="chapter" data-level="3.31" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#percentiles"><i class="fa fa-check"></i><b>3.31</b> Percentiles</a></li>
+<li class="chapter" data-level="3.32" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#interpretation-of-percentiles"><i class="fa fa-check"></i><b>3.32</b> Interpretation of Percentiles</a></li>
+<li class="chapter" data-level="3.33" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#example-from-a-dataset"><i class="fa fa-check"></i><b>3.33</b> Example from a dataset</a></li>
+<li class="chapter" data-level="3.34" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#notations-2"><i class="fa fa-check"></i><b>3.34</b> Notations</a></li>
+<li class="chapter" data-level="3.35" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#converting-a-percentile-to-a-data-value"><i class="fa fa-check"></i><b>3.35</b> Converting a Percentile to a Data Value</a></li>
+<li class="chapter" data-level="3.36" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#example-5"><i class="fa fa-check"></i><b>3.36</b> Example</a></li>
+<li class="chapter" data-level="3.37" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#quartiles"><i class="fa fa-check"></i><b>3.37</b> Quartiles</a></li>
+<li class="chapter" data-level="3.38" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#statistics-defined-using-quartiles-and-percentiles"><i class="fa fa-check"></i><b>3.38</b> Statistics defined using quartiles and percentiles</a></li>
+<li class="chapter" data-level="3.39" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#number-summary"><i class="fa fa-check"></i><b>3.39</b> 5-Number Summary</a></li>
+<li class="chapter" data-level="3.40" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#example-finding-a-5-number-summary"><i class="fa fa-check"></i><b>3.40</b> Example: Finding a 5-Number Summary</a></li>
+<li class="chapter" data-level="3.41" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#boxplot-or-box-and-whisker-diagram"><i class="fa fa-check"></i><b>3.41</b> Boxplot (or Box-and-Whisker Diagram)</a></li>
+<li class="chapter" data-level="3.42" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#procedure-for-constructing-a-boxplot"><i class="fa fa-check"></i><b>3.42</b> Procedure for Constructing a Boxplot</a></li>
+<li class="chapter" data-level="3.43" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#skewness"><i class="fa fa-check"></i><b>3.43</b> Skewness</a></li>
+<li class="chapter" data-level="3.44" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#identifying-outliers-for-modified-boxplots"><i class="fa fa-check"></i><b>3.44</b> Identifying Outliers for Modified Boxplots</a></li>
+<li class="chapter" data-level="3.45" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#modified-boxplot"><i class="fa fa-check"></i><b>3.45</b> Modified Boxplot</a></li>
+<li class="chapter" data-level="3.46" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#example-6"><i class="fa fa-check"></i><b>3.46</b> Example</a></li>
+<li class="chapter" data-level="3.47" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#comparative-boxplots"><i class="fa fa-check"></i><b>3.47</b> Comparative Boxplots</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>4</b> Methods</a></li>
+<li class="chapter" data-level="5" data-path="applications.html"><a href="applications.html"><i class="fa fa-check"></i><b>5</b> Applications</a><ul>
+<li class="chapter" data-level="5.1" data-path="applications.html"><a href="applications.html#example-one"><i class="fa fa-check"></i><b>5.1</b> Example one</a></li>
+<li class="chapter" data-level="5.2" data-path="applications.html"><a href="applications.html#example-two"><i class="fa fa-check"></i><b>5.2</b> Example two</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="final-words.html"><a href="final-words.html"><i class="fa fa-check"></i><b>6</b> Final Words</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Math 115: Elementary Statistics</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="methods" class="section level1">
+<h1><span class="header-section-number">Chapter 4</span> Methods</h1>
+<p>We describe our methods in this chapter.</p>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="descriptive-statistics.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="applications.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["Book.pdf", "Book.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

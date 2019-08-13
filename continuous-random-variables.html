@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 6 Continuous random variables | Math 115: Elementary Statistics</title>
+  <meta name="description" content="These are the slides I use in class. Most of the materials are obtained from our textbook: Elementary Statistics 13th edition by Mario F. Triola." />
+  <meta name="generator" content="bookdown 0.12 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 6 Continuous random variables | Math 115: Elementary Statistics" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="These are the slides I use in class. Most of the materials are obtained from our textbook: Elementary Statistics 13th edition by Mario F. Triola." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 6 Continuous random variables | Math 115: Elementary Statistics" />
+  
+  <meta name="twitter:description" content="These are the slides I use in class. Most of the materials are obtained from our textbook: Elementary Statistics 13th edition by Mario F. Triola." />
+  
+
+<meta name="author" content="Rong You" />
+
+
+<meta name="date" content="2019-08-12" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="probability-distributions.html">
+<link rel="next" href="confidence-intervals.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Math 115 Lecture Notes</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Chapter 1</a><ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#welcome"><i class="fa fa-check"></i><b>1.1</b> Welcome</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#statistical-and-critical-thinking"><i class="fa fa-check"></i><b>1.2</b> Statistical and Critical Thinking</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#example-1"><i class="fa fa-check"></i><b>1.3</b> Example 1</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#example-2"><i class="fa fa-check"></i><b>1.4</b> Example 2</a></li>
+<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#statistical-thinking-procedure"><i class="fa fa-check"></i><b>1.5</b> Statistical Thinking Procedure:</a></li>
+<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#types-of-data"><i class="fa fa-check"></i><b>1.6</b> Types of Data</a></li>
+<li class="chapter" data-level="1.7" data-path="index.html"><a href="index.html#example-3"><i class="fa fa-check"></i><b>1.7</b> Example 3</a></li>
+<li class="chapter" data-level="1.8" data-path="index.html"><a href="index.html#levels-of-measurement"><i class="fa fa-check"></i><b>1.8</b> Levels of Measurement</a></li>
+<li class="chapter" data-level="1.9" data-path="index.html"><a href="index.html#summary---levels-of-measurement"><i class="fa fa-check"></i><b>1.9</b> Summary - Levels of Measurement</a></li>
+<li class="chapter" data-level="1.10" data-path="index.html"><a href="index.html#big-data-and-data-science"><i class="fa fa-check"></i><b>1.10</b> Big Data and Data Science</a></li>
+<li class="chapter" data-level="1.11" data-path="index.html"><a href="index.html#how-do-we-gather-data"><i class="fa fa-check"></i><b>1.11</b> How do we gather data?</a></li>
+<li class="chapter" data-level="1.12" data-path="index.html"><a href="index.html#how-good-a-poll-would-be"><i class="fa fa-check"></i><b>1.12</b> How good a poll would be?</a></li>
+<li class="chapter" data-level="1.13" data-path="index.html"><a href="index.html#basics-of-collecting-data"><i class="fa fa-check"></i><b>1.13</b> Basics of Collecting Data</a></li>
+<li class="chapter" data-level="1.14" data-path="index.html"><a href="index.html#observational-study-survey"><i class="fa fa-check"></i><b>1.14</b> Observational Study: Survey</a></li>
+<li class="chapter" data-level="1.15" data-path="index.html"><a href="index.html#sampling-methods"><i class="fa fa-check"></i><b>1.15</b> Sampling Methods:</a></li>
+<li class="chapter" data-level="1.16" data-path="index.html"><a href="index.html#sampling-methods-simple-random-sample"><i class="fa fa-check"></i><b>1.16</b> Sampling Methods: Simple Random Sample</a></li>
+<li class="chapter" data-level="1.17" data-path="index.html"><a href="index.html#samping-methods-systematic-sampling"><i class="fa fa-check"></i><b>1.17</b> Samping Methods: Systematic Sampling</a></li>
+<li class="chapter" data-level="1.18" data-path="index.html"><a href="index.html#sampling-methods-stratified-random-sample"><i class="fa fa-check"></i><b>1.18</b> Sampling Methods: Stratified random sample</a></li>
+<li class="chapter" data-level="1.19" data-path="index.html"><a href="index.html#sampling-methods-cluster-sampling"><i class="fa fa-check"></i><b>1.19</b> Sampling Methods: Cluster Sampling</a></li>
+<li class="chapter" data-level="1.20" data-path="index.html"><a href="index.html#sampling-methods-convenience-sampling"><i class="fa fa-check"></i><b>1.20</b> Sampling Methods: Convenience sampling</a></li>
+<li class="chapter" data-level="1.21" data-path="index.html"><a href="index.html#summary-of-sampling-methods"><i class="fa fa-check"></i><b>1.21</b> Summary of Sampling Methods</a></li>
+<li class="chapter" data-level="1.22" data-path="index.html"><a href="index.html#example-4"><i class="fa fa-check"></i><b>1.22</b> Example 4</a></li>
+<li class="chapter" data-level="1.23" data-path="index.html"><a href="index.html#bias"><i class="fa fa-check"></i><b>1.23</b> Bias</a></li>
+<li class="chapter" data-level="1.24" data-path="index.html"><a href="index.html#potential-pitfalls"><i class="fa fa-check"></i><b>1.24</b> Potential Pitfalls</a></li>
+<li class="chapter" data-level="1.25" data-path="index.html"><a href="index.html#experimental-design"><i class="fa fa-check"></i><b>1.25</b> Experimental Design</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="graphical-displas.html"><a href="graphical-displas.html"><i class="fa fa-check"></i><b>2</b> Graphical Displas</a><ul>
+<li class="chapter" data-level="2.1" data-path="graphical-displas.html"><a href="graphical-displas.html#frequency-distribution"><i class="fa fa-check"></i><b>2.1</b> Frequency Distribution</a></li>
+<li class="chapter" data-level="2.2" data-path="graphical-displas.html"><a href="graphical-displas.html#procedure-for-constructing-a-frequency-distribution"><i class="fa fa-check"></i><b>2.2</b> Procedure for Constructing a Frequency Distribution</a></li>
+<li class="chapter" data-level="2.3" data-path="graphical-displas.html"><a href="graphical-displas.html#example"><i class="fa fa-check"></i><b>2.3</b> Example</a></li>
+<li class="chapter" data-level="2.4" data-path="graphical-displas.html"><a href="graphical-displas.html#relative-frequency-distribution"><i class="fa fa-check"></i><b>2.4</b> Relative Frequency Distribution</a></li>
+<li class="chapter" data-level="2.5" data-path="graphical-displas.html"><a href="graphical-displas.html#cumulative-frequency-distribution"><i class="fa fa-check"></i><b>2.5</b> Cumulative Frequency Distribution</a></li>
+<li class="chapter" data-level="2.6" data-path="graphical-displas.html"><a href="graphical-displas.html#cumulative-relative-frequence"><i class="fa fa-check"></i><b>2.6</b> Cumulative Relative Frequence</a></li>
+<li class="chapter" data-level="2.7" data-path="graphical-displas.html"><a href="graphical-displas.html#using-frequency-distributions-to-understand-data"><i class="fa fa-check"></i><b>2.7</b> Using Frequency Distributions to Understand Data</a></li>
+<li class="chapter" data-level="2.8" data-path="graphical-displas.html"><a href="graphical-displas.html#gaps"><i class="fa fa-check"></i><b>2.8</b> Gaps</a></li>
+<li class="chapter" data-level="2.9" data-path="graphical-displas.html"><a href="graphical-displas.html#what-do-gaps-tell-us"><i class="fa fa-check"></i><b>2.9</b> What Do Gaps Tell Us?</a></li>
+<li class="chapter" data-level="2.10" data-path="graphical-displas.html"><a href="graphical-displas.html#histogram"><i class="fa fa-check"></i><b>2.10</b> Histogram</a></li>
+<li class="chapter" data-level="2.11" data-path="graphical-displas.html"><a href="graphical-displas.html#important-uses-of-a-histogram"><i class="fa fa-check"></i><b>2.11</b> Important Uses of a Histogram</a></li>
+<li class="chapter" data-level="2.12" data-path="graphical-displas.html"><a href="graphical-displas.html#example-of-a-histogram"><i class="fa fa-check"></i><b>2.12</b> Example of A Histogram</a></li>
+<li class="chapter" data-level="2.13" data-path="graphical-displas.html"><a href="graphical-displas.html#interpreting-histograms"><i class="fa fa-check"></i><b>2.13</b> Interpreting Histograms</a></li>
+<li class="chapter" data-level="2.14" data-path="graphical-displas.html"><a href="graphical-displas.html#common-distribution-shapes"><i class="fa fa-check"></i><b>2.14</b> Common Distribution Shapes</a></li>
+<li class="chapter" data-level="2.15" data-path="graphical-displas.html"><a href="graphical-displas.html#assessing-normality-with-normal-quantile-plots-q-q-plots"><i class="fa fa-check"></i><b>2.15</b> Assessing Normality with Normal Quantile Plots (Q-Q plots)</a></li>
+<li class="chapter" data-level="2.16" data-path="graphical-displas.html"><a href="graphical-displas.html#examples-of-q-q-plots"><i class="fa fa-check"></i><b>2.16</b> Examples of Q-Q plots</a></li>
+<li class="chapter" data-level="2.17" data-path="graphical-displas.html"><a href="graphical-displas.html#dotplots"><i class="fa fa-check"></i><b>2.17</b> Dotplots</a></li>
+<li class="chapter" data-level="2.18" data-path="graphical-displas.html"><a href="graphical-displas.html#stemplots-you-need-to-assign-a-key-to-read-a-stem-plot"><i class="fa fa-check"></i><b>2.18</b> Stemplots (You need to assign a key to read a stem plot)</a></li>
+<li class="chapter" data-level="2.19" data-path="graphical-displas.html"><a href="graphical-displas.html#bar-graph"><i class="fa fa-check"></i><b>2.19</b> Bar Graph</a></li>
+<li class="chapter" data-level="2.20" data-path="graphical-displas.html"><a href="graphical-displas.html#pareto-chart"><i class="fa fa-check"></i><b>2.20</b> Pareto Chart</a></li>
+<li class="chapter" data-level="2.21" data-path="graphical-displas.html"><a href="graphical-displas.html#pie-charts"><i class="fa fa-check"></i><b>2.21</b> Pie Charts</a></li>
+<li class="chapter" data-level="2.22" data-path="graphical-displas.html"><a href="graphical-displas.html#frequency-polygon"><i class="fa fa-check"></i><b>2.22</b> Frequency Polygon</a></li>
+<li class="chapter" data-level="2.23" data-path="graphical-displas.html"><a href="graphical-displas.html#graphs-that-deceive"><i class="fa fa-check"></i><b>2.23</b> Graphs That Deceive</a></li>
+<li class="chapter" data-level="2.24" data-path="graphical-displas.html"><a href="graphical-displas.html#pictographs"><i class="fa fa-check"></i><b>2.24</b> Pictographs</a></li>
+<li class="chapter" data-level="2.25" data-path="graphical-displas.html"><a href="graphical-displas.html#scatterplot-two-numerical-variables"><i class="fa fa-check"></i><b>2.25</b> Scatterplot (Two Numerical Variables)</a></li>
+<li class="chapter" data-level="2.26" data-path="graphical-displas.html"><a href="graphical-displas.html#nba"><i class="fa fa-check"></i><b>2.26</b> NBA</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html"><i class="fa fa-check"></i><b>3</b> Descriptive Statistics</a><ul>
+<li class="chapter" data-level="3.1" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#mean-or-arithmetic-mean"><i class="fa fa-check"></i><b>3.1</b> Mean (or Arithmetic Mean)</a></li>
+<li class="chapter" data-level="3.2" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#notations"><i class="fa fa-check"></i><b>3.2</b> Notations</a></li>
+<li class="chapter" data-level="3.3" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#mean-example"><i class="fa fa-check"></i><b>3.3</b> Mean-Example</a></li>
+<li class="chapter" data-level="3.4" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#median"><i class="fa fa-check"></i><b>3.4</b> Median</a></li>
+<li class="chapter" data-level="3.5" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#median-example"><i class="fa fa-check"></i><b>3.5</b> Median-Example</a></li>
+<li class="chapter" data-level="3.6" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#which-one-do-you-use-mean-or-median"><i class="fa fa-check"></i><b>3.6</b> Which one do you use? Mean or Median?</a></li>
+<li class="chapter" data-level="3.7" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#which-one-do-you-use-mean-or-median-1"><i class="fa fa-check"></i><b>3.7</b> Which one do you use? Mean or Median?</a></li>
+<li class="chapter" data-level="3.8" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#mode"><i class="fa fa-check"></i><b>3.8</b> Mode</a></li>
+<li class="chapter" data-level="3.9" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#mode-example"><i class="fa fa-check"></i><b>3.9</b> Mode-Example</a></li>
+<li class="chapter" data-level="3.10" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#midrange"><i class="fa fa-check"></i><b>3.10</b> Midrange</a></li>
+<li class="chapter" data-level="3.11" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#round-off-rules-for-measures-of-center"><i class="fa fa-check"></i><b>3.11</b> Round-Off Rules for Measures of Center</a></li>
+<li class="chapter" data-level="3.12" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#calculating-a-weighted-mean"><i class="fa fa-check"></i><b>3.12</b> Calculating a Weighted Mean</a></li>
+<li class="chapter" data-level="3.13" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#more-examples-about-finding-the-means"><i class="fa fa-check"></i><b>3.13</b> More Examples About Finding The Means</a></li>
+<li class="chapter" data-level="3.14" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#measures-of-variation"><i class="fa fa-check"></i><b>3.14</b> Measures of Variation</a></li>
+<li class="chapter" data-level="3.15" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#round-off-rule-for-measures-of-variation"><i class="fa fa-check"></i><b>3.15</b> Round-off Rule for Measures of Variation</a></li>
+<li class="chapter" data-level="3.16" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#range"><i class="fa fa-check"></i><b>3.16</b> Range</a></li>
+<li class="chapter" data-level="3.17" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#standard-deviation"><i class="fa fa-check"></i><b>3.17</b> Standard Deviation</a></li>
+<li class="chapter" data-level="3.18" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#formula"><i class="fa fa-check"></i><b>3.18</b> Formula</a></li>
+<li class="chapter" data-level="3.19" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#interpretation-of-standard-deviation"><i class="fa fa-check"></i><b>3.19</b> Interpretation of Standard Deviation</a></li>
+<li class="chapter" data-level="3.20" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#range-rule-of-thumb-for-understanding-standard-deviation"><i class="fa fa-check"></i><b>3.20</b> Range Rule of Thumb for Understanding Standard Deviation</a></li>
+<li class="chapter" data-level="3.21" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#range-rule-of-thumb-for-estimating-a-value-of-the-standard-deviation-s"><i class="fa fa-check"></i><b>3.21</b> Range Rule of Thumb for Estimating a Value of the Standard Deviation s</a></li>
+<li class="chapter" data-level="3.22" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#variance-of-a-sample-and-a-population"><i class="fa fa-check"></i><b>3.22</b> Variance of a Sample and a Population</a></li>
+<li class="chapter" data-level="3.23" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#notations-1"><i class="fa fa-check"></i><b>3.23</b> Notations</a></li>
+<li class="chapter" data-level="3.24" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#the-empirical-rule"><i class="fa fa-check"></i><b>3.24</b> The Empirical Rule</a></li>
+<li class="chapter" data-level="3.25" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#chebyshevs-theorem"><i class="fa fa-check"></i><b>3.25</b> Chebyshev’s Theorem</a></li>
+<li class="chapter" data-level="3.26" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#extra-example"><i class="fa fa-check"></i><b>3.26</b> Extra Example</a></li>
+<li class="chapter" data-level="3.27" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#measures-of-relative-standing-and-boxplots"><i class="fa fa-check"></i><b>3.27</b> Measures of Relative Standing and Boxplots</a></li>
+<li class="chapter" data-level="3.28" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#z-scores"><i class="fa fa-check"></i><b>3.28</b> z Scores</a></li>
+<li class="chapter" data-level="3.29" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#important-properties-of-z-scores"><i class="fa fa-check"></i><b>3.29</b> Important Properties of z Scores</a></li>
+<li class="chapter" data-level="3.30" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#examples"><i class="fa fa-check"></i><b>3.30</b> Examples</a></li>
+<li class="chapter" data-level="3.31" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#percentiles"><i class="fa fa-check"></i><b>3.31</b> Percentiles</a></li>
+<li class="chapter" data-level="3.32" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#interpretation-of-percentiles"><i class="fa fa-check"></i><b>3.32</b> Interpretation of Percentiles</a></li>
+<li class="chapter" data-level="3.33" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#example-from-a-dataset"><i class="fa fa-check"></i><b>3.33</b> Example from a dataset</a></li>
+<li class="chapter" data-level="3.34" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#notations-2"><i class="fa fa-check"></i><b>3.34</b> Notations</a></li>
+<li class="chapter" data-level="3.35" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#converting-a-percentile-to-a-data-value"><i class="fa fa-check"></i><b>3.35</b> Converting a Percentile to a Data Value</a></li>
+<li class="chapter" data-level="3.36" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#example-5"><i class="fa fa-check"></i><b>3.36</b> Example</a></li>
+<li class="chapter" data-level="3.37" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#quartiles"><i class="fa fa-check"></i><b>3.37</b> Quartiles</a></li>
+<li class="chapter" data-level="3.38" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#statistics-defined-using-quartiles-and-percentiles"><i class="fa fa-check"></i><b>3.38</b> Statistics defined using quartiles and percentiles</a></li>
+<li class="chapter" data-level="3.39" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#number-summary"><i class="fa fa-check"></i><b>3.39</b> 5-Number Summary</a></li>
+<li class="chapter" data-level="3.40" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#example-finding-a-5-number-summary"><i class="fa fa-check"></i><b>3.40</b> Example: Finding a 5-Number Summary</a></li>
+<li class="chapter" data-level="3.41" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#boxplot-or-box-and-whisker-diagram"><i class="fa fa-check"></i><b>3.41</b> Boxplot (or Box-and-Whisker Diagram)</a></li>
+<li class="chapter" data-level="3.42" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#procedure-for-constructing-a-boxplot"><i class="fa fa-check"></i><b>3.42</b> Procedure for Constructing a Boxplot</a></li>
+<li class="chapter" data-level="3.43" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#skewness"><i class="fa fa-check"></i><b>3.43</b> Skewness</a></li>
+<li class="chapter" data-level="3.44" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#identifying-outliers-for-modified-boxplots"><i class="fa fa-check"></i><b>3.44</b> Identifying Outliers for Modified Boxplots</a></li>
+<li class="chapter" data-level="3.45" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#modified-boxplot"><i class="fa fa-check"></i><b>3.45</b> Modified Boxplot</a></li>
+<li class="chapter" data-level="3.46" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#example-6"><i class="fa fa-check"></i><b>3.46</b> Example</a></li>
+<li class="chapter" data-level="3.47" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#comparative-boxplots"><i class="fa fa-check"></i><b>3.47</b> Comparative Boxplots</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="probility.html"><a href="probility.html"><i class="fa fa-check"></i><b>4</b> Probility</a><ul>
+<li class="chapter" data-level="4.1" data-path="probility.html"><a href="probility.html#some-history"><i class="fa fa-check"></i><b>4.1</b> Some History</a></li>
+<li class="chapter" data-level="4.2" data-path="probility.html"><a href="probility.html#basics-of-probability"><i class="fa fa-check"></i><b>4.2</b> Basics of Probability</a></li>
+<li class="chapter" data-level="4.3" data-path="probility.html"><a href="probility.html#example-7"><i class="fa fa-check"></i><b>4.3</b> Example:</a></li>
+<li class="chapter" data-level="4.4" data-path="probility.html"><a href="probility.html#notation-for-probabilities"><i class="fa fa-check"></i><b>4.4</b> Notation for Probabilities</a></li>
+<li class="chapter" data-level="4.5" data-path="probility.html"><a href="probility.html#probability-limits"><i class="fa fa-check"></i><b>4.5</b> Probability Limits</a></li>
+<li class="chapter" data-level="4.6" data-path="probility.html"><a href="probility.html#three-common-approaches-to-finding-the-probability-of-an-event"><i class="fa fa-check"></i><b>4.6</b> Three Common Approaches to Finding the Probability of an Event</a></li>
+<li class="chapter" data-level="4.7" data-path="probility.html"><a href="probility.html#rounding-probabilities"><i class="fa fa-check"></i><b>4.7</b> Rounding Probabilities</a></li>
+<li class="chapter" data-level="4.8" data-path="probility.html"><a href="probility.html#law-of-large-numbers"><i class="fa fa-check"></i><b>4.8</b> Law of Large Numbers</a></li>
+<li class="chapter" data-level="4.9" data-path="probility.html"><a href="probility.html#example-8"><i class="fa fa-check"></i><b>4.9</b> Example</a></li>
+<li class="chapter" data-level="4.10" data-path="probility.html"><a href="probility.html#complementary-events"><i class="fa fa-check"></i><b>4.10</b> Complementary Events</a></li>
+<li class="chapter" data-level="4.11" data-path="probility.html"><a href="probility.html#rules-of-complementary-events"><i class="fa fa-check"></i><b>4.11</b> Rules of Complementary Events</a></li>
+<li class="chapter" data-level="4.12" data-path="probility.html"><a href="probility.html#identifying-significant-results-with-probabilities"><i class="fa fa-check"></i><b>4.12</b> Identifying Significant Results with Probabilities</a></li>
+<li class="chapter" data-level="4.13" data-path="probility.html"><a href="probility.html#probability-review"><i class="fa fa-check"></i><b>4.13</b> Probability Review</a></li>
+<li class="chapter" data-level="4.14" data-path="probility.html"><a href="probility.html#odds"><i class="fa fa-check"></i><b>4.14</b> Odds</a></li>
+<li class="chapter" data-level="4.15" data-path="probility.html"><a href="probility.html#example-actual-odds-versus-payoff-odds"><i class="fa fa-check"></i><b>4.15</b> Example: Actual Odds Versus Payoff Odds</a></li>
+<li class="chapter" data-level="4.16" data-path="probility.html"><a href="probility.html#super-lotto"><i class="fa fa-check"></i><b>4.16</b> Super Lotto</a></li>
+<li class="chapter" data-level="4.17" data-path="probility.html"><a href="probility.html#addition-rule-and-multiplication-rule"><i class="fa fa-check"></i><b>4.17</b> Addition Rule and Multiplication Rule</a></li>
+<li class="chapter" data-level="4.18" data-path="probility.html"><a href="probility.html#disjoint-events-and-the-addition-rule"><i class="fa fa-check"></i><b>4.18</b> Disjoint Events and the Addition Rule</a></li>
+<li class="chapter" data-level="4.19" data-path="probility.html"><a href="probility.html#summary"><i class="fa fa-check"></i><b>4.19</b> Summary</a></li>
+<li class="chapter" data-level="4.20" data-path="probility.html"><a href="probility.html#rule-of-complementary-events"><i class="fa fa-check"></i><b>4.20</b> Rule of Complementary Events</a></li>
+<li class="chapter" data-level="4.21" data-path="probility.html"><a href="probility.html#example-9"><i class="fa fa-check"></i><b>4.21</b> Example</a></li>
+<li class="chapter" data-level="4.22" data-path="probility.html"><a href="probility.html#multiplication-rule"><i class="fa fa-check"></i><b>4.22</b> Multiplication Rule</a></li>
+<li class="chapter" data-level="4.23" data-path="probility.html"><a href="probility.html#independence-and-the-multiplication-rule"><i class="fa fa-check"></i><b>4.23</b> Independence and the Multiplication Rule</a></li>
+<li class="chapter" data-level="4.24" data-path="probility.html"><a href="probility.html#sampling"><i class="fa fa-check"></i><b>4.24</b> Sampling</a></li>
+<li class="chapter" data-level="4.25" data-path="probility.html"><a href="probility.html#redundancy-important-application-of-the-multiplication-rule"><i class="fa fa-check"></i><b>4.25</b> Redundancy: Important Application of the Multiplication Rule</a></li>
+<li class="chapter" data-level="4.26" data-path="probility.html"><a href="probility.html#combining-the-addition-and-multiplication-rules-tree-diagrams"><i class="fa fa-check"></i><b>4.26</b> Combining the addition and multiplication rules &amp; Tree Diagrams</a></li>
+<li class="chapter" data-level="4.27" data-path="probility.html"><a href="probility.html#more-examples"><i class="fa fa-check"></i><b>4.27</b> More Examples</a></li>
+<li class="chapter" data-level="4.28" data-path="probility.html"><a href="probility.html#summary-of-addition-rule-and-multiplication-rule"><i class="fa fa-check"></i><b>4.28</b> Summary of Addition Rule and Multiplication Rule</a></li>
+<li class="chapter" data-level="4.29" data-path="probility.html"><a href="probility.html#complements-and-conditional-probability"><i class="fa fa-check"></i><b>4.29</b> Complements and Conditional Probability</a></li>
+<li class="chapter" data-level="4.30" data-path="probility.html"><a href="probility.html#the-probability-of-at-least-one"><i class="fa fa-check"></i><b>4.30</b> The Probability of “At Least One”</a></li>
+<li class="chapter" data-level="4.31" data-path="probility.html"><a href="probility.html#conditional-probability"><i class="fa fa-check"></i><b>4.31</b> Conditional Probability</a></li>
+<li class="chapter" data-level="4.32" data-path="probility.html"><a href="probility.html#example-10"><i class="fa fa-check"></i><b>4.32</b> Example:</a></li>
+<li class="chapter" data-level="4.33" data-path="probility.html"><a href="probility.html#more-examples-about-drug-testing"><i class="fa fa-check"></i><b>4.33</b> More Examples About Drug Testing</a></li>
+<li class="chapter" data-level="4.34" data-path="probility.html"><a href="probility.html#two-way-table"><i class="fa fa-check"></i><b>4.34</b> Two-Way Table</a></li>
+<li class="chapter" data-level="4.35" data-path="probility.html"><a href="probility.html#counting"><i class="fa fa-check"></i><b>4.35</b> Counting</a></li>
+<li class="chapter" data-level="4.36" data-path="probility.html"><a href="probility.html#permutations-order-matters"><i class="fa fa-check"></i><b>4.36</b> Permutations: Order Matters</a></li>
+<li class="chapter" data-level="4.37" data-path="probility.html"><a href="probility.html#combinations-order-doesnt-matter"><i class="fa fa-check"></i><b>4.37</b> Combinations: Order Doesn’t Matter</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="probability-distributions.html"><a href="probability-distributions.html"><i class="fa fa-check"></i><b>5</b> Probability Distributions</a><ul>
+<li class="chapter" data-level="5.1" data-path="probability-distributions.html"><a href="probability-distributions.html#probability-distribution-requirements"><i class="fa fa-check"></i><b>5.1</b> Probability Distribution Requirements</a></li>
+<li class="chapter" data-level="5.2" data-path="probability-distributions.html"><a href="probability-distributions.html#example-11"><i class="fa fa-check"></i><b>5.2</b> Example</a></li>
+<li class="chapter" data-level="5.3" data-path="probability-distributions.html"><a href="probability-distributions.html#example-12"><i class="fa fa-check"></i><b>5.3</b> Example</a></li>
+<li class="chapter" data-level="5.4" data-path="probability-distributions.html"><a href="probability-distributions.html#parameters-of-a-probability-distribution"><i class="fa fa-check"></i><b>5.4</b> Parameters of a Probability Distribution</a></li>
+<li class="chapter" data-level="5.5" data-path="probability-distributions.html"><a href="probability-distributions.html#example-13"><i class="fa fa-check"></i><b>5.5</b> Example</a></li>
+<li class="chapter" data-level="5.6" data-path="probability-distributions.html"><a href="probability-distributions.html#fair-game"><i class="fa fa-check"></i><b>5.6</b> Fair Game</a></li>
+<li class="chapter" data-level="5.7" data-path="probability-distributions.html"><a href="probability-distributions.html#practice"><i class="fa fa-check"></i><b>5.7</b> Practice</a></li>
+<li class="chapter" data-level="5.8" data-path="probability-distributions.html"><a href="probability-distributions.html#binomial-probability-distributions"><i class="fa fa-check"></i><b>5.8</b> Binomial Probability Distributions:</a></li>
+<li class="chapter" data-level="5.9" data-path="probability-distributions.html"><a href="probability-distributions.html#binomial-formula"><i class="fa fa-check"></i><b>5.9</b> Binomial Formula:</a></li>
+<li class="chapter" data-level="5.10" data-path="probability-distributions.html"><a href="probability-distributions.html#example-14"><i class="fa fa-check"></i><b>5.10</b> Example</a></li>
+<li class="chapter" data-level="5.11" data-path="probability-distributions.html"><a href="probability-distributions.html#more-cases"><i class="fa fa-check"></i><b>5.11</b> More Cases:</a></li>
+<li class="chapter" data-level="5.12" data-path="probability-distributions.html"><a href="probability-distributions.html#binomial-random-variable-expected-value-and-standard-deviation"><i class="fa fa-check"></i><b>5.12</b> Binomial Random Variable: Expected value and standard deviation</a></li>
+<li class="chapter" data-level="5.13" data-path="probability-distributions.html"><a href="probability-distributions.html#practice-1"><i class="fa fa-check"></i><b>5.13</b> Practice</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="continuous-random-variables.html"><a href="continuous-random-variables.html"><i class="fa fa-check"></i><b>6</b> Continuous random variables</a><ul>
+<li class="chapter" data-level="6.1" data-path="continuous-random-variables.html"><a href="continuous-random-variables.html#density-curves"><i class="fa fa-check"></i><b>6.1</b> Density curves</a></li>
+<li class="chapter" data-level="6.2" data-path="continuous-random-variables.html"><a href="continuous-random-variables.html#special-continuous-distributions-uniform-distribution"><i class="fa fa-check"></i><b>6.2</b> Special Continuous Distributions: Uniform Distribution</a></li>
+<li class="chapter" data-level="6.3" data-path="continuous-random-variables.html"><a href="continuous-random-variables.html#example-15"><i class="fa fa-check"></i><b>6.3</b> Example</a></li>
+<li class="chapter" data-level="6.4" data-path="continuous-random-variables.html"><a href="continuous-random-variables.html#normal-distribution"><i class="fa fa-check"></i><b>6.4</b> Normal Distribution</a></li>
+<li class="chapter" data-level="6.5" data-path="continuous-random-variables.html"><a href="continuous-random-variables.html#history-and-graph"><i class="fa fa-check"></i><b>6.5</b> History and Graph</a></li>
+<li class="chapter" data-level="6.6" data-path="continuous-random-variables.html"><a href="continuous-random-variables.html#standard-normal-distribution"><i class="fa fa-check"></i><b>6.6</b> Standard Normal Distribution</a></li>
+<li class="chapter" data-level="6.7" data-path="continuous-random-variables.html"><a href="continuous-random-variables.html#strategies-for-finding-probabilities-or-proportions-in-normal-distributions"><i class="fa fa-check"></i><b>6.7</b> Strategies for finding probabilities or proportions in normal distributions</a></li>
+<li class="chapter" data-level="6.8" data-path="continuous-random-variables.html"><a href="continuous-random-variables.html#example-16"><i class="fa fa-check"></i><b>6.8</b> Example</a></li>
+<li class="chapter" data-level="6.9" data-path="continuous-random-variables.html"><a href="continuous-random-variables.html#notation"><i class="fa fa-check"></i><b>6.9</b> Notation</a></li>
+<li class="chapter" data-level="6.10" data-path="continuous-random-variables.html"><a href="continuous-random-variables.html#finding-z-scores-from-known-areas"><i class="fa fa-check"></i><b>6.10</b> Finding z Scores from Known Areas</a></li>
+<li class="chapter" data-level="6.11" data-path="continuous-random-variables.html"><a href="continuous-random-variables.html#critical-value"><i class="fa fa-check"></i><b>6.11</b> Critical Value</a></li>
+<li class="chapter" data-level="6.12" data-path="continuous-random-variables.html"><a href="continuous-random-variables.html#real-applications-of-normal-distributions"><i class="fa fa-check"></i><b>6.12</b> Real Applications of Normal Distributions</a></li>
+<li class="chapter" data-level="6.13" data-path="continuous-random-variables.html"><a href="continuous-random-variables.html#converting-to-a-standard-normal-distribution"><i class="fa fa-check"></i><b>6.13</b> Converting to a Standard Normal Distribution</a></li>
+<li class="chapter" data-level="6.14" data-path="continuous-random-variables.html"><a href="continuous-random-variables.html#procedure-for-finding-areas-with-a-nonstandard-normal-distribution"><i class="fa fa-check"></i><b>6.14</b> Procedure for Finding Areas with a Nonstandard Normal Distribution</a></li>
+<li class="chapter" data-level="6.15" data-path="continuous-random-variables.html"><a href="continuous-random-variables.html#examples-1"><i class="fa fa-check"></i><b>6.15</b> Examples</a></li>
+<li class="chapter" data-level="6.16" data-path="continuous-random-variables.html"><a href="continuous-random-variables.html#finding-values-from-known-areas"><i class="fa fa-check"></i><b>6.16</b> Finding Values From Known Areas</a></li>
+<li class="chapter" data-level="6.17" data-path="continuous-random-variables.html"><a href="continuous-random-variables.html#examples-2"><i class="fa fa-check"></i><b>6.17</b> Examples</a></li>
+<li class="chapter" data-level="6.18" data-path="continuous-random-variables.html"><a href="continuous-random-variables.html#mixed-practice"><i class="fa fa-check"></i><b>6.18</b> Mixed Practice</a></li>
+<li class="chapter" data-level="6.19" data-path="continuous-random-variables.html"><a href="continuous-random-variables.html#sampling-distributions-and-estimators"><i class="fa fa-check"></i><b>6.19</b> Sampling Distributions and Estimators</a></li>
+<li class="chapter" data-level="6.20" data-path="continuous-random-variables.html"><a href="continuous-random-variables.html#general-behavior-of-sampling-distributions"><i class="fa fa-check"></i><b>6.20</b> General Behavior of Sampling Distributions</a></li>
+<li class="chapter" data-level="6.21" data-path="continuous-random-variables.html"><a href="continuous-random-variables.html#estimator"><i class="fa fa-check"></i><b>6.21</b> Estimator</a></li>
+<li class="chapter" data-level="6.22" data-path="continuous-random-variables.html"><a href="continuous-random-variables.html#why-sample-with-replacement"><i class="fa fa-check"></i><b>6.22</b> Why Sample with Replacement?</a></li>
+<li class="chapter" data-level="6.23" data-path="continuous-random-variables.html"><a href="continuous-random-variables.html#central-limit-theorem"><i class="fa fa-check"></i><b>6.23</b> Central Limit Theorem</a></li>
+<li class="chapter" data-level="6.24" data-path="continuous-random-variables.html"><a href="continuous-random-variables.html#practical-rules-for-real-applications-involving-a-sample-mean-x-bar"><i class="fa fa-check"></i><b>6.24</b> Practical Rules for Real Applications Involving a Sample Mean x-bar</a></li>
+<li class="chapter" data-level="6.25" data-path="continuous-random-variables.html"><a href="continuous-random-variables.html#considerations-for-practical-problem-solving"><i class="fa fa-check"></i><b>6.25</b> Considerations for Practical Problem Solving</a></li>
+<li class="chapter" data-level="6.26" data-path="continuous-random-variables.html"><a href="continuous-random-variables.html#examples-3"><i class="fa fa-check"></i><b>6.26</b> Examples</a></li>
+<li class="chapter" data-level="6.27" data-path="continuous-random-variables.html"><a href="continuous-random-variables.html#assessing-normality"><i class="fa fa-check"></i><b>6.27</b> Assessing Normality</a></li>
+<li class="chapter" data-level="6.28" data-path="continuous-random-variables.html"><a href="continuous-random-variables.html#example-17"><i class="fa fa-check"></i><b>6.28</b> Example</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="confidence-intervals.html"><a href="confidence-intervals.html"><i class="fa fa-check"></i><b>7</b> Confidence Intervals</a><ul>
+<li class="chapter" data-level="7.1" data-path="confidence-intervals.html"><a href="confidence-intervals.html#point-estimate"><i class="fa fa-check"></i><b>7.1</b> Point Estimate</a></li>
+<li class="chapter" data-level="7.2" data-path="confidence-intervals.html"><a href="confidence-intervals.html#confidence-intervals-1"><i class="fa fa-check"></i><b>7.2</b> Confidence Intervals</a></li>
+<li class="chapter" data-level="7.3" data-path="confidence-intervals.html"><a href="confidence-intervals.html#confidence-level"><i class="fa fa-check"></i><b>7.3</b> Confidence level</a></li>
+<li class="chapter" data-level="7.4" data-path="confidence-intervals.html"><a href="confidence-intervals.html#margin-of-error"><i class="fa fa-check"></i><b>7.4</b> Margin of Error</a></li>
+<li class="chapter" data-level="7.5" data-path="confidence-intervals.html"><a href="confidence-intervals.html#critical-value-1"><i class="fa fa-check"></i><b>7.5</b> Critical value</a></li>
+<li class="chapter" data-level="7.6" data-path="confidence-intervals.html"><a href="confidence-intervals.html#margin-of-error-for-proportions"><i class="fa fa-check"></i><b>7.6</b> Margin of Error for Proportions</a></li>
+<li class="chapter" data-level="7.7" data-path="confidence-intervals.html"><a href="confidence-intervals.html#confidence-interval-for-estimating-a-population-proportion-p"><i class="fa fa-check"></i><b>7.7</b> Confidence Interval for Estimating a Population Proportion p</a></li>
+<li class="chapter" data-level="7.8" data-path="confidence-intervals.html"><a href="confidence-intervals.html#steps-for-doing-a-confidence-interval"><i class="fa fa-check"></i><b>7.8</b> Steps for doing a confidence interval:</a></li>
+<li class="chapter" data-level="7.9" data-path="confidence-intervals.html"><a href="confidence-intervals.html#assumptions-for-confidence-interval-of-proportion"><i class="fa fa-check"></i><b>7.9</b> Assumptions for confidence interval of proportion</a></li>
+<li class="chapter" data-level="7.10" data-path="confidence-intervals.html"><a href="confidence-intervals.html#calculation"><i class="fa fa-check"></i><b>7.10</b> Calculation</a></li>
+<li class="chapter" data-level="7.11" data-path="confidence-intervals.html"><a href="confidence-intervals.html#confidence-interval-mantra-conclusion"><i class="fa fa-check"></i><b>7.11</b> Confidence Interval Mantra (Conclusion):</a></li>
+<li class="chapter" data-level="7.12" data-path="confidence-intervals.html"><a href="confidence-intervals.html#example-18"><i class="fa fa-check"></i><b>7.12</b> Example</a></li>
+<li class="chapter" data-level="7.13" data-path="confidence-intervals.html"><a href="confidence-intervals.html#analyzing-polls"><i class="fa fa-check"></i><b>7.13</b> Analyzing Polls</a></li>
+<li class="chapter" data-level="7.14" data-path="confidence-intervals.html"><a href="confidence-intervals.html#example-19"><i class="fa fa-check"></i><b>7.14</b> Example</a></li>
+<li class="chapter" data-level="7.15" data-path="confidence-intervals.html"><a href="confidence-intervals.html#finding-the-point-estimate-and-e-from-a-confidence-interval"><i class="fa fa-check"></i><b>7.15</b> Finding the Point Estimate and E from a Confidence Interval</a></li>
+<li class="chapter" data-level="7.16" data-path="confidence-intervals.html"><a href="confidence-intervals.html#determining-sample-size-finding-the-sample-size-required-to-estimate-a-population-proportion"><i class="fa fa-check"></i><b>7.16</b> Determining Sample Size: Finding the Sample Size Required to Estimate a Population Proportion</a></li>
+<li class="chapter" data-level="7.17" data-path="confidence-intervals.html"><a href="confidence-intervals.html#estimating-a-population-mean"><i class="fa fa-check"></i><b>7.17</b> Estimating a Population Mean</a></li>
+<li class="chapter" data-level="7.18" data-path="confidence-intervals.html"><a href="confidence-intervals.html#students-t--distribution"><i class="fa fa-check"></i><b>7.18</b> Student’s t- distribution</a></li>
+<li class="chapter" data-level="7.19" data-path="confidence-intervals.html"><a href="confidence-intervals.html#formula-1"><i class="fa fa-check"></i><b>7.19</b> Formula:</a></li>
+<li class="chapter" data-level="7.20" data-path="confidence-intervals.html"><a href="confidence-intervals.html#how-to-find-the-critical-t-value"><i class="fa fa-check"></i><b>7.20</b> How to find the critical t value</a></li>
+<li class="chapter" data-level="7.21" data-path="confidence-intervals.html"><a href="confidence-intervals.html#steps-for-doing-a-confidence-interval-for-population-mean-steps-are-the-same-as-confidence-interval-for-proportion"><i class="fa fa-check"></i><b>7.21</b> Steps for doing a confidence interval for population mean ( steps are the same as confidence interval for proportion):</a></li>
+<li class="chapter" data-level="7.22" data-path="confidence-intervals.html"><a href="confidence-intervals.html#assumptions"><i class="fa fa-check"></i><b>7.22</b> Assumptions:</a></li>
+<li class="chapter" data-level="7.23" data-path="confidence-intervals.html"><a href="confidence-intervals.html#example-20"><i class="fa fa-check"></i><b>7.23</b> Example</a></li>
+<li class="chapter" data-level="7.24" data-path="confidence-intervals.html"><a href="confidence-intervals.html#example-21"><i class="fa fa-check"></i><b>7.24</b> Example</a></li>
+<li class="chapter" data-level="7.25" data-path="confidence-intervals.html"><a href="confidence-intervals.html#estimate-sample-sizes"><i class="fa fa-check"></i><b>7.25</b> Estimate sample sizes:</a></li>
+<li class="chapter" data-level="7.26" data-path="confidence-intervals.html"><a href="confidence-intervals.html#dealing-with-unknown-sigma-when-finding-sample-size"><i class="fa fa-check"></i><b>7.26</b> Dealing with Unknown <span class="math inline">\(\sigma\)</span> When Finding Sample Size</a></li>
+<li class="chapter" data-level="7.27" data-path="confidence-intervals.html"><a href="confidence-intervals.html#using-real-data"><i class="fa fa-check"></i><b>7.27</b> Using real data</a></li>
+<li class="chapter" data-level="7.28" data-path="confidence-intervals.html"><a href="confidence-intervals.html#more-complicated-example"><i class="fa fa-check"></i><b>7.28</b> More Complicated Example</a></li>
+<li class="chapter" data-level="7.29" data-path="confidence-intervals.html"><a href="confidence-intervals.html#estimating-a-population-mean-when-population-standard-deviation-is-known"><i class="fa fa-check"></i><b>7.29</b> Estimating a Population Mean When Population Standard Deviation Is Known</a></li>
+<li class="chapter" data-level="7.30" data-path="confidence-intervals.html"><a href="confidence-intervals.html#choosing-an-appropriate-distribution"><i class="fa fa-check"></i><b>7.30</b> Choosing an Appropriate Distribution</a></li>
+<li class="chapter" data-level="7.31" data-path="confidence-intervals.html"><a href="confidence-intervals.html#practice-2"><i class="fa fa-check"></i><b>7.31</b> Practice</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="hypothesis-testings.html"><a href="hypothesis-testings.html"><i class="fa fa-check"></i><b>8</b> Hypothesis Testings</a><ul>
+<li class="chapter" data-level="8.1" data-path="hypothesis-testings.html"><a href="hypothesis-testings.html#basics-of-hypothesis-testing"><i class="fa fa-check"></i><b>8.1</b> Basics of Hypothesis Testing</a></li>
+<li class="chapter" data-level="8.2" data-path="hypothesis-testings.html"><a href="hypothesis-testings.html#steps"><i class="fa fa-check"></i><b>8.2</b> Steps</a></li>
+<li class="chapter" data-level="8.3" data-path="hypothesis-testings.html"><a href="hypothesis-testings.html#assumptions-same-as-the-confidence-intervals"><i class="fa fa-check"></i><b>8.3</b> Assumptions (Same as the confidence intervals’)</a></li>
+<li class="chapter" data-level="8.4" data-path="hypothesis-testings.html"><a href="hypothesis-testings.html#writing-hypothesis-statements"><i class="fa fa-check"></i><b>8.4</b> Writing Hypothesis statements:</a></li>
+<li class="chapter" data-level="8.5" data-path="hypothesis-testings.html"><a href="hypothesis-testings.html#identify-the-correct-hypothesis-statements."><i class="fa fa-check"></i><b>8.5</b> Identify the Correct Hypothesis Statements.</a></li>
+<li class="chapter" data-level="8.6" data-path="hypothesis-testings.html"><a href="hypothesis-testings.html#significance-level-alpha"><i class="fa fa-check"></i><b>8.6</b> Significance Level <span class="math inline">\(\alpha\)</span></a></li>
+<li class="chapter" data-level="8.7" data-path="hypothesis-testings.html"><a href="hypothesis-testings.html#test-statistic"><i class="fa fa-check"></i><b>8.7</b> Test Statistic</a></li>
+<li class="chapter" data-level="8.8" data-path="hypothesis-testings.html"><a href="hypothesis-testings.html#critical-region"><i class="fa fa-check"></i><b>8.8</b> Critical Region</a></li>
+<li class="chapter" data-level="8.9" data-path="hypothesis-testings.html"><a href="hypothesis-testings.html#p-value-method-easier-to-understand"><i class="fa fa-check"></i><b>8.9</b> P-Value Method (Easier to understand)</a></li>
+<li class="chapter" data-level="8.10" data-path="hypothesis-testings.html"><a href="hypothesis-testings.html#calculating-p-values-by-hand"><i class="fa fa-check"></i><b>8.10</b> Calculating P-values (By hand)</a></li>
+<li class="chapter" data-level="8.11" data-path="hypothesis-testings.html"><a href="hypothesis-testings.html#statistical-significant"><i class="fa fa-check"></i><b>8.11</b> Statistical Significant</a></li>
+<li class="chapter" data-level="8.12" data-path="hypothesis-testings.html"><a href="hypothesis-testings.html#example-22"><i class="fa fa-check"></i><b>8.12</b> Example:</a></li>
+<li class="chapter" data-level="8.13" data-path="hypothesis-testings.html"><a href="hypothesis-testings.html#writing-conclusions"><i class="fa fa-check"></i><b>8.13</b> Writing Conclusions:</a></li>
+<li class="chapter" data-level="8.14" data-path="hypothesis-testings.html"><a href="hypothesis-testings.html#conclusion-format"><i class="fa fa-check"></i><b>8.14</b> Conclusion Format:</a></li>
+<li class="chapter" data-level="8.15" data-path="hypothesis-testings.html"><a href="hypothesis-testings.html#examples-4"><i class="fa fa-check"></i><b>8.15</b> Examples:</a></li>
+<li class="chapter" data-level="8.16" data-path="hypothesis-testings.html"><a href="hypothesis-testings.html#errors"><i class="fa fa-check"></i><b>8.16</b> Errors</a></li>
+<li class="chapter" data-level="8.17" data-path="hypothesis-testings.html"><a href="hypothesis-testings.html#example-23"><i class="fa fa-check"></i><b>8.17</b> Example</a></li>
+<li class="chapter" data-level="8.18" data-path="hypothesis-testings.html"><a href="hypothesis-testings.html#controlling-type-i-and-type-ii-errors"><i class="fa fa-check"></i><b>8.18</b> Controlling Type I and Type II Errors</a></li>
+<li class="chapter" data-level="8.19" data-path="hypothesis-testings.html"><a href="hypothesis-testings.html#power-of-a-hypothesis"><i class="fa fa-check"></i><b>8.19</b> Power of a Hypothesis</a></li>
+<li class="chapter" data-level="8.20" data-path="hypothesis-testings.html"><a href="hypothesis-testings.html#testing-a-claim-about-a-mean"><i class="fa fa-check"></i><b>8.20</b> Testing a Claim About a Mean</a></li>
+<li class="chapter" data-level="8.21" data-path="hypothesis-testings.html"><a href="hypothesis-testings.html#example-24"><i class="fa fa-check"></i><b>8.21</b> Example</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="two-sample-inference.html"><a href="two-sample-inference.html"><i class="fa fa-check"></i><b>9</b> Two-Sample Inference</a><ul>
+<li class="chapter" data-level="9.1" data-path="two-sample-inference.html"><a href="two-sample-inference.html#two-proportions"><i class="fa fa-check"></i><b>9.1</b> Two Proportions</a></li>
+<li class="chapter" data-level="9.2" data-path="two-sample-inference.html"><a href="two-sample-inference.html#notation-1"><i class="fa fa-check"></i><b>9.2</b> Notation:</a></li>
+<li class="chapter" data-level="9.3" data-path="two-sample-inference.html"><a href="two-sample-inference.html#mean-of-the-difference-and-the-standard-devaition-of-the-difference."><i class="fa fa-check"></i><b>9.3</b> Mean of the difference and the standard devaition of the difference.</a></li>
+<li class="chapter" data-level="9.4" data-path="two-sample-inference.html"><a href="two-sample-inference.html#assumptions-1"><i class="fa fa-check"></i><b>9.4</b> Assumptions</a></li>
+<li class="chapter" data-level="9.5" data-path="two-sample-inference.html"><a href="two-sample-inference.html#calculation-1"><i class="fa fa-check"></i><b>9.5</b> Calculation:</a></li>
+<li class="chapter" data-level="9.6" data-path="two-sample-inference.html"><a href="two-sample-inference.html#calculation-2"><i class="fa fa-check"></i><b>9.6</b> Calculation</a></li>
+<li class="chapter" data-level="9.7" data-path="two-sample-inference.html"><a href="two-sample-inference.html#interpretation"><i class="fa fa-check"></i><b>9.7</b> Interpretation</a></li>
+<li class="chapter" data-level="9.8" data-path="two-sample-inference.html"><a href="two-sample-inference.html#example-25"><i class="fa fa-check"></i><b>9.8</b> Example</a></li>
+<li class="chapter" data-level="9.9" data-path="two-sample-inference.html"><a href="two-sample-inference.html#example-26"><i class="fa fa-check"></i><b>9.9</b> Example</a></li>
+<li class="chapter" data-level="9.10" data-path="two-sample-inference.html"><a href="two-sample-inference.html#hypothesis-testing-for-two-sample-proportions"><i class="fa fa-check"></i><b>9.10</b> Hypothesis Testing for Two-Sample Proportions</a></li>
+<li class="chapter" data-level="9.11" data-path="two-sample-inference.html"><a href="two-sample-inference.html#example-27"><i class="fa fa-check"></i><b>9.11</b> Example:</a></li>
+<li class="chapter" data-level="9.12" data-path="two-sample-inference.html"><a href="two-sample-inference.html#two-means-samples-with-sigma_1-and-sigma_2-unknown-and-not-assumed-equal"><i class="fa fa-check"></i><b>9.12</b> Two Means: Samples with <span class="math inline">\(\sigma_1\)</span> and <span class="math inline">\(\sigma_2\)</span> Unknown and Not Assumed Equal</a></li>
+<li class="chapter" data-level="9.13" data-path="two-sample-inference.html"><a href="two-sample-inference.html#notations-3"><i class="fa fa-check"></i><b>9.13</b> Notations</a></li>
+<li class="chapter" data-level="9.14" data-path="two-sample-inference.html"><a href="two-sample-inference.html#assumptions-2"><i class="fa fa-check"></i><b>9.14</b> Assumptions:</a></li>
+<li class="chapter" data-level="9.15" data-path="two-sample-inference.html"><a href="two-sample-inference.html#calculation-for-confidence-interval"><i class="fa fa-check"></i><b>9.15</b> Calculation for Confidence Interval</a></li>
+<li class="chapter" data-level="9.16" data-path="two-sample-inference.html"><a href="two-sample-inference.html#interpretation-1"><i class="fa fa-check"></i><b>9.16</b> Interpretation</a></li>
+<li class="chapter" data-level="9.17" data-path="two-sample-inference.html"><a href="two-sample-inference.html#example-28"><i class="fa fa-check"></i><b>9.17</b> Example</a></li>
+<li class="chapter" data-level="9.18" data-path="two-sample-inference.html"><a href="two-sample-inference.html#hypothesis-testing-for-two-sample-mean-difference-of-means"><i class="fa fa-check"></i><b>9.18</b> Hypothesis Testing for Two-Sample Mean (Difference of Means)</a></li>
+<li class="chapter" data-level="9.19" data-path="two-sample-inference.html"><a href="two-sample-inference.html#example-29"><i class="fa fa-check"></i><b>9.19</b> Example</a></li>
+<li class="chapter" data-level="9.20" data-path="two-sample-inference.html"><a href="two-sample-inference.html#two-dependent-samples-matched-pairs"><i class="fa fa-check"></i><b>9.20</b> Two Dependent Samples (Matched Pairs)</a></li>
+<li class="chapter" data-level="9.21" data-path="two-sample-inference.html"><a href="two-sample-inference.html#good-experimental-design"><i class="fa fa-check"></i><b>9.21</b> Good Experimental Design</a></li>
+<li class="chapter" data-level="9.22" data-path="two-sample-inference.html"><a href="two-sample-inference.html#assumptions-3"><i class="fa fa-check"></i><b>9.22</b> Assumptions</a></li>
+<li class="chapter" data-level="9.23" data-path="two-sample-inference.html"><a href="two-sample-inference.html#calculation-for-confidence-interval-1"><i class="fa fa-check"></i><b>9.23</b> Calculation for Confidence Interval</a></li>
+<li class="chapter" data-level="9.24" data-path="two-sample-inference.html"><a href="two-sample-inference.html#conclusion"><i class="fa fa-check"></i><b>9.24</b> Conclusion</a></li>
+<li class="chapter" data-level="9.25" data-path="two-sample-inference.html"><a href="two-sample-inference.html#hypothesis-statement"><i class="fa fa-check"></i><b>9.25</b> Hypothesis Statement:</a></li>
+<li class="chapter" data-level="9.26" data-path="two-sample-inference.html"><a href="two-sample-inference.html#calculation-3"><i class="fa fa-check"></i><b>9.26</b> Calculation</a></li>
+<li class="chapter" data-level="9.27" data-path="two-sample-inference.html"><a href="two-sample-inference.html#example-30"><i class="fa fa-check"></i><b>9.27</b> Example</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="linear-regression.html"><a href="linear-regression.html"><i class="fa fa-check"></i><b>10</b> Linear Regression</a><ul>
+<li class="chapter" data-level="10.1" data-path="linear-regression.html"><a href="linear-regression.html#correlation"><i class="fa fa-check"></i><b>10.1</b> Correlation</a></li>
+<li class="chapter" data-level="10.2" data-path="linear-regression.html"><a href="linear-regression.html#interpreting-scatterplots"><i class="fa fa-check"></i><b>10.2</b> Interpreting Scatterplots</a></li>
+<li class="chapter" data-level="10.3" data-path="linear-regression.html"><a href="linear-regression.html#identify-as-having-a-positive-association-a-negative-association-or-no-association."><i class="fa fa-check"></i><b>10.3</b> Identify as having a positive association, a negative association, or no association.</a></li>
+<li class="chapter" data-level="10.4" data-path="linear-regression.html"><a href="linear-regression.html#linear-correlation-coefficient-r"><i class="fa fa-check"></i><b>10.4</b> Linear Correlation Coefficient <span class="math inline">\(r\)</span></a></li>
+<li class="chapter" data-level="10.5" data-path="linear-regression.html"><a href="linear-regression.html#properties-of-r"><i class="fa fa-check"></i><b>10.5</b> Properties of <span class="math inline">\(r\)</span></a></li>
+<li class="chapter" data-level="10.6" data-path="linear-regression.html"><a href="linear-regression.html#interpretation-of-r"><i class="fa fa-check"></i><b>10.6</b> Interpretation of r</a></li>
+<li class="chapter" data-level="10.7" data-path="linear-regression.html"><a href="linear-regression.html#example-31"><i class="fa fa-check"></i><b>10.7</b> Example</a></li>
+<li class="chapter" data-level="10.8" data-path="linear-regression.html"><a href="linear-regression.html#using-p-value-from-technology-to-interpret-r"><i class="fa fa-check"></i><b>10.8</b> Using P-Value from Technology to Interpret r</a></li>
+<li class="chapter" data-level="10.9" data-path="linear-regression.html"><a href="linear-regression.html#example-32"><i class="fa fa-check"></i><b>10.9</b> Example</a></li>
+<li class="chapter" data-level="10.10" data-path="linear-regression.html"><a href="linear-regression.html#interpreting-r2-explained-variation"><i class="fa fa-check"></i><b>10.10</b> Interpreting <span class="math inline">\(r^2\)</span>: Explained Variation</a></li>
+<li class="chapter" data-level="10.11" data-path="linear-regression.html"><a href="linear-regression.html#correlation-does-not-imply-causation"><i class="fa fa-check"></i><b>10.11</b> Correlation does not imply causation!!!!!!!!!</a></li>
+<li class="chapter" data-level="10.12" data-path="linear-regression.html"><a href="linear-regression.html#linear-regression-for-bivariate-data"><i class="fa fa-check"></i><b>10.12</b> Linear Regression for Bivariate Data</a></li>
+<li class="chapter" data-level="10.13" data-path="linear-regression.html"><a href="linear-regression.html#finding-the-equation-of-the-regression-line-notation-for-the-equation-of-a-regression-line"><i class="fa fa-check"></i><b>10.13</b> Finding the Equation of the Regression Line: Notation for the Equation of a Regression Line</a></li>
+<li class="chapter" data-level="10.14" data-path="linear-regression.html"><a href="linear-regression.html#finding-the-equation-of-the-regression-line-requirements"><i class="fa fa-check"></i><b>10.14</b> Finding the Equation of the Regression Line: Requirements</a></li>
+<li class="chapter" data-level="10.15" data-path="linear-regression.html"><a href="linear-regression.html#least-squares-regression-line-lsrl"><i class="fa fa-check"></i><b>10.15</b> Least Squares Regression Line: LSRL</a></li>
+<li class="chapter" data-level="10.16" data-path="linear-regression.html"><a href="linear-regression.html#interpretations-of-variables"><i class="fa fa-check"></i><b>10.16</b> Interpretations of Variables</a></li>
+<li class="chapter" data-level="10.17" data-path="linear-regression.html"><a href="linear-regression.html#example-33"><i class="fa fa-check"></i><b>10.17</b> Example</a></li>
+<li class="chapter" data-level="10.18" data-path="linear-regression.html"><a href="linear-regression.html#extrapolation"><i class="fa fa-check"></i><b>10.18</b> Extrapolation</a></li>
+<li class="chapter" data-level="10.19" data-path="linear-regression.html"><a href="linear-regression.html#practice-3"><i class="fa fa-check"></i><b>10.19</b> Practice</a></li>
+<li class="chapter" data-level="10.20" data-path="linear-regression.html"><a href="linear-regression.html#making-predictions"><i class="fa fa-check"></i><b>10.20</b> Making Predictions</a></li>
+<li class="chapter" data-level="10.21" data-path="linear-regression.html"><a href="linear-regression.html#outlier"><i class="fa fa-check"></i><b>10.21</b> Outlier</a></li>
+<li class="chapter" data-level="10.22" data-path="linear-regression.html"><a href="linear-regression.html#residuals-error"><i class="fa fa-check"></i><b>10.22</b> Residuals (error)</a></li>
+<li class="chapter" data-level="10.23" data-path="linear-regression.html"><a href="linear-regression.html#resudual-plot"><i class="fa fa-check"></i><b>10.23</b> Resudual Plot</a></li>
+<li class="chapter" data-level="10.24" data-path="linear-regression.html"><a href="linear-regression.html#how-to-read-typical-computer-outputs"><i class="fa fa-check"></i><b>10.24</b> How to Read Typical Computer outputs</a></li>
+<li class="chapter" data-level="10.25" data-path="linear-regression.html"><a href="linear-regression.html#complete-regression-analysis"><i class="fa fa-check"></i><b>10.25</b> Complete Regression Analysis</a></li>
+<li class="chapter" data-level="10.26" data-path="linear-regression.html"><a href="linear-regression.html#explained-and-unexplained-variation"><i class="fa fa-check"></i><b>10.26</b> Explained and Unexplained Variation</a></li>
+<li class="chapter" data-level="10.27" data-path="linear-regression.html"><a href="linear-regression.html#coefficient-of-determination"><i class="fa fa-check"></i><b>10.27</b> Coefficient of Determination</a></li>
+<li class="chapter" data-level="10.28" data-path="linear-regression.html"><a href="linear-regression.html#more-practice-see-handout"><i class="fa fa-check"></i><b>10.28</b> More Practice (See Handout)</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="chi2-test.html"><a href="chi2-test.html"><i class="fa fa-check"></i><b>11</b> <span class="math inline">\(\chi^2\)</span> Test</a><ul>
+<li class="chapter" data-level="11.1" data-path="chi2-test.html"><a href="chi2-test.html#testing-categorical-variables-or-contingency-tables-chi2-test"><i class="fa fa-check"></i><b>11.1</b> Testing Categorical Variables or Contingency Tables– <span class="math inline">\(\chi^2\)</span> Test</a></li>
+<li class="chapter" data-level="11.2" data-path="chi2-test.html"><a href="chi2-test.html#chi-squared-test-chi2"><i class="fa fa-check"></i><b>11.2</b> Chi-Squared Test (<span class="math inline">\(\chi^2\)</span>)</a></li>
+<li class="chapter" data-level="11.3" data-path="chi2-test.html"><a href="chi2-test.html#chi2-distribution"><i class="fa fa-check"></i><b>11.3</b> <span class="math inline">\(\chi^2\)</span> Distribution</a></li>
+<li class="chapter" data-level="11.4" data-path="chi2-test.html"><a href="chi2-test.html#chi2-assumptions"><i class="fa fa-check"></i><b>11.4</b> <span class="math inline">\(\chi^2\)</span> Assumptions</a></li>
+<li class="chapter" data-level="11.5" data-path="chi2-test.html"><a href="chi2-test.html#hypothesis-statetment-write-in-context"><i class="fa fa-check"></i><b>11.5</b> Hypothesis Statetment: Write in Context</a></li>
+<li class="chapter" data-level="11.6" data-path="chi2-test.html"><a href="chi2-test.html#first-case-chi2-goodness-of-fit-test"><i class="fa fa-check"></i><b>11.6</b> First Case: <span class="math inline">\(\chi^2\)</span> Goodness-of-Fit Test</a></li>
+<li class="chapter" data-level="11.7" data-path="chi2-test.html"><a href="chi2-test.html#how-do-we-find-the-expected-counts"><i class="fa fa-check"></i><b>11.7</b> How do we find the expected counts</a></li>
+<li class="chapter" data-level="11.8" data-path="chi2-test.html"><a href="chi2-test.html#example-34"><i class="fa fa-check"></i><b>11.8</b> Example</a></li>
+<li class="chapter" data-level="11.9" data-path="chi2-test.html"><a href="chi2-test.html#example-35"><i class="fa fa-check"></i><b>11.9</b> Example</a></li>
+<li class="chapter" data-level="11.10" data-path="chi2-test.html"><a href="chi2-test.html#example-36"><i class="fa fa-check"></i><b>11.10</b> Example</a></li>
+<li class="chapter" data-level="11.11" data-path="chi2-test.html"><a href="chi2-test.html#example-37"><i class="fa fa-check"></i><b>11.11</b> Example</a></li>
+<li class="chapter" data-level="11.12" data-path="chi2-test.html"><a href="chi2-test.html#contingency-table"><i class="fa fa-check"></i><b>11.12</b> Contingency Table</a></li>
+<li class="chapter" data-level="11.13" data-path="chi2-test.html"><a href="chi2-test.html#chi2-test-for-independence"><i class="fa fa-check"></i><b>11.13</b> <span class="math inline">\(\chi^2\)</span> test for independence</a></li>
+<li class="chapter" data-level="11.14" data-path="chi2-test.html"><a href="chi2-test.html#example-38"><i class="fa fa-check"></i><b>11.14</b> Example</a></li>
+<li class="chapter" data-level="11.15" data-path="chi2-test.html"><a href="chi2-test.html#example-continued"><i class="fa fa-check"></i><b>11.15</b> Example: Continued</a></li>
+<li class="chapter" data-level="11.16" data-path="chi2-test.html"><a href="chi2-test.html#example-39"><i class="fa fa-check"></i><b>11.16</b> Example</a></li>
+<li class="chapter" data-level="11.17" data-path="chi2-test.html"><a href="chi2-test.html#chi2-test-of-homogenity"><i class="fa fa-check"></i><b>11.17</b> <span class="math inline">\(\chi^2\)</span> Test of Homogenity</a></li>
+<li class="chapter" data-level="11.18" data-path="chi2-test.html"><a href="chi2-test.html#example-40"><i class="fa fa-check"></i><b>11.18</b> Example</a></li>
+<li class="chapter" data-level="11.19" data-path="chi2-test.html"><a href="chi2-test.html#practice-4"><i class="fa fa-check"></i><b>11.19</b> Practice</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Math 115: Elementary Statistics</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="continuous-random-variables" class="section level1">
+<h1><span class="header-section-number">Chapter 6</span> Continuous random variables</h1>
+<ol style="list-style-type: decimal">
+<li>Are numerical variables whose values fall within a range or interval</li>
+<li>Are measurements can be described by density curves</li>
+</ol>
+<div id="density-curves" class="section level2">
+<h2><span class="header-section-number">6.1</span> Density curves</h2>
+<ol style="list-style-type: decimal">
+<li>Is always on or above the horizontal axis</li>
+<li>Has an area exactly equal to one underneath it</li>
+<li>Often describes an overall distribution</li>
+<li>Describe what proportions of the observations fall within each range of values</li>
+<li>Can be any shape</li>
+<li>Are generic continuous distributions</li>
+<li>Probabilities are calculated by <strong>finding the area under the curve</strong></li>
+<li>Notes: <span class="math inline">\(\textrm{In continuous distributions } P(X &lt; 2)\&amp; P(X \leq 2) \textrm{are the same answer}\)</span></li>
+</ol>
+</div>
+<div id="special-continuous-distributions-uniform-distribution" class="section level2">
+<h2><span class="header-section-number">6.2</span> Special Continuous Distributions: Uniform Distribution</h2>
+<p><img src="Book_files/figure-html/unnamed-chunk-33-1.png" width="672" /></p>
+<p><span class="math display">\[X\sim UNIF(a,b)\]</span></p>
+<p>Where a is the minimun value, and b is the maximum value.</p>
+<ol style="list-style-type: decimal">
+<li>Is a continuous distribution that is evenly (or uniformly) distributed</li>
+<li>Has a density curve in the shape of a rectangle</li>
+<li>Probabilities are calculated by finding the area under the curve</li>
+</ol>
+<p><span class="math display">\[\mu_x=\frac{a+b}{2}\\ \sigma_x=\sqrt{\frac{(b-a)^2}{12}}\]</span></p>
+</div>
+<div id="example-15" class="section level2">
+<h2><span class="header-section-number">6.3</span> Example</h2>
+<p>The Citrus Sugar Company packs sugar in bags labeled 5 pounds. However, the packaging isn’t perfect and the actual weights are uniformly distributed with a mean of 4.98 pounds and a range of .12 pounds.</p>
+<ol style="list-style-type: decimal">
+<li>Construct the uniform distribution above.</li>
+<li>What is the probability that a randomly selected bag will weigh more than 4.97 pounds?</li>
+<li>Find the probability that a randomly selected bag weighs between 4.93 and 5.03 pounds.</li>
+</ol>
+<p>The time it takes for students to drive to school is evenly distributed with a minimum of 5 minutes and a range of 35 minutes.</p>
+<ol style="list-style-type: decimal">
+<li>Draw the distribution</li>
+<li>What is the probability that it takes less than 20 minutes to drive to school?</li>
+<li>What is the mean and standard deviation of this distribution?</li>
+</ol>
+</div>
+<div id="normal-distribution" class="section level2">
+<h2><span class="header-section-number">6.4</span> Normal Distribution</h2>
+<p><span class="math display">\[X\sim \mathcal{N}(\mu, \sigma)\]</span></p>
+<p>If a continuous random variable has a distribution with a graph that is symmetric and bell-shaped, we say that it has a normal distribution.
+1. Symmetrical bell-shaped (unimodal) density curve
+2. Above the horizontal axis
+3. The transition points occur at <span class="math inline">\(\mu\pm\sigma\)</span>
+4. Probability is calculated by finding the area under the curve
+5. As <span class="math inline">\(\sigma\)</span> increases, the curve flattens &amp; spreads out
+6. As <span class="math inline">\(\sigma\)</span> decreases, the curve gets taller and thinner</p>
+</div>
+<div id="history-and-graph" class="section level2">
+<h2><span class="header-section-number">6.5</span> History and Graph</h2>
+<ul>
+<li><p>Carl Friedrich Gauss ( German mathematician and physicist, 1777-1855); predicted the path of Ceres using least squares regression</p></li>
+<li><div class="borderexample">
+If <span class="math inline">\(X\sim \mathcal{N}(\mu, \sigma)\)</span>, then the probability density funcion is:
+<span class="math display">\[f(x)=\frac{1}{\sqrt{2\pi\sigma^2}}e^{-\frac{(x-\mu)^2}{2\sigma^2}}\]</span>
+</div></li>
+</ul>
+<p>The graph:</p>
+<p><img src="6_pic1.PNG" /></p>
+</div>
+<div id="standard-normal-distribution" class="section level2">
+<h2><span class="header-section-number">6.6</span> Standard Normal Distribution</h2>
+<ul>
+<li><strong>Standard Normal Distribution</strong>: The standard normal distribution is a normal distribution with the parameters of <span class="math inline">\(\mu=0\)</span> and <span class="math inline">\(\sigma=1\)</span>. The total area under its density curve is equal to 1.</li>
+<li><img src="6_pic2.png" /></li>
+</ul>
+</div>
+<div id="strategies-for-finding-probabilities-or-proportions-in-normal-distributions" class="section level2">
+<h2><span class="header-section-number">6.7</span> Strategies for finding probabilities or proportions in normal distributions</h2>
+<ol style="list-style-type: decimal">
+<li>State the probability statement</li>
+<li>Draw a picture</li>
+<li>Look up the probability (proportion) in the table (Use Statdisk eventually)</li>
+</ol>
+</div>
+<div id="example-16" class="section level2">
+<h2><span class="header-section-number">6.8</span> Example</h2>
+<ul>
+<li><p>A bone mineral density test can be helpful in identifying the presence of osteoporosis. The result of the test is commonly measured as a z score, which has a normal distribution with a mean of 0 and a standard deviation of 1. A randomly selected adult undergoes a bone density test. Find the probability that the result is a reading less than 1.27.</p></li>
+<li><p>Using the same bone density test, find the probability that a randomly selected person has a result above -1.00 (which is considered to be in the “normal” range of bone density readings.</p></li>
+<li>A bone density reading between -1.00 and -2.50 indicates the subject has osteopenia. Find this probability.
+<ul>
+<li>The area to the left of z=-1.00 is 0.1587.</li>
+<li>The area to the left of z=-2.50 is 0.0062.</li>
+<li>The area between z=-1.00 and z=-2.50 is the difference between the areas found above.</li>
+<li><img src="6_pic3.png" /></li>
+</ul></li>
+</ul>
+</div>
+<div id="notation" class="section level2">
+<h2><span class="header-section-number">6.9</span> Notation</h2>
+<ul>
+<li><span class="math inline">\(P(a &lt; z &lt; b)\)</span> denotes the probability that the z score is between a and b.</li>
+<li><span class="math inline">\(P(z &gt; a)\)</span> denotes the probability that the z score is greater than a.</li>
+<li><span class="math inline">\(P(z &lt; a)\)</span> denotes the probability that the z score is less than a.</li>
+</ul>
+</div>
+<div id="finding-z-scores-from-known-areas" class="section level2">
+<h2><span class="header-section-number">6.10</span> Finding z Scores from Known Areas</h2>
+<ol style="list-style-type: decimal">
+<li>Draw a bell-shaped curve and identify the region under the curve that corresponds to the given probability. If that region is not a cumulative region from the left, work instead with a known region that is a cumulative region from the left.</li>
+<li>Use technology or Table to find the z score. With Table A-2, use the cumulative area from the left, locate the closest probability in the body of the table, and identify the corresponding z score</li>
+<li><img src="6_pic4.png" /></li>
+</ol>
+</div>
+<div id="critical-value" class="section level2">
+<h2><span class="header-section-number">6.11</span> Critical Value</h2>
+<ul>
+<li>For the standard normal distribution, a critical value is a z score on the borderline separating those z scores that are significantly low or significantly high.</li>
+<li>Notation: The expression <span class="math inline">\(z_{\alpha}\)</span> denotes the z score with an area of <span class="math inline">\(\alpha\)</span> to its right.</li>
+<li>Find the value of <span class="math inline">\(z_{0.025}\)</span> , which means <span class="math inline">\(\alpha=0.025\)</span></li>
+</ul>
+</div>
+<div id="real-applications-of-normal-distributions" class="section level2">
+<h2><span class="header-section-number">6.12</span> Real Applications of Normal Distributions</h2>
+<p>Conversion Formula: <span class="math display">\[z=\frac{x-\mu}{\sigma}\]</span></p>
+<p>round z scores to 2 decimal places</p>
+<p>The formula allows us to “standardize” any normal distribution so that x values can be transformed to <span class="math inline">\(z\)</span> scores.</p>
+</div>
+<div id="converting-to-a-standard-normal-distribution" class="section level2">
+<h2><span class="header-section-number">6.13</span> Converting to a Standard Normal Distribution</h2>
+<p><img src="6_pic5.png" /></p>
+</div>
+<div id="procedure-for-finding-areas-with-a-nonstandard-normal-distribution" class="section level2">
+<h2><span class="header-section-number">6.14</span> Procedure for Finding Areas with a Nonstandard Normal Distribution</h2>
+<ol style="list-style-type: decimal">
+<li>State the probability statement</li>
+<li>Draw a picture</li>
+<li>Calculate the z-score using <span class="math inline">\(z=\frac{x-\mu}{\sigma}\)</span></li>
+<li>Look up the probability (proportion) in the table, or use Statdisk</li>
+</ol>
+</div>
+<div id="examples-1" class="section level2">
+<h2><span class="header-section-number">6.15</span> Examples</h2>
+<ul>
+<li>The lifetime of a certain type of battery is normally distributed with a mean of 200 hours and a standard deviation of 15 hours. What proportion of these batteries can be expected to last less than 220 hours?</li>
+<li>Heights of men are normally distributed with a mean of 68.6 in. and a standard deviation of 2.8 in. Find the percentage of men who are taller than a showerhead at 72 in.</li>
+<li>Scores of each of the previous chemistry tests were normally distributed with a mean of 78 and standard deviation of 2.3. Peter will be taking the test tomorrow. What is the probability of Peter getting between 80 and 81 on the test?</li>
+</ul>
+</div>
+<div id="finding-values-from-known-areas" class="section level2">
+<h2><span class="header-section-number">6.16</span> Finding Values From Known Areas</h2>
+<ol style="list-style-type: decimal">
+<li>Graphs are extremely helpful in visualizing, understanding, and successfully working with normal provability distributions, so they should always be used.</li>
+<li>Don’t confuse z scores and areas.z scores are distances along the horizontal scale, but areas are regions under the normal curve. Table A-2 lists z scores in the left columns and across the top row, but areas are found in the body of the table.</li>
+<li>Choose the correct (right/left) side of the graph. A value separating the top 10% from the others will be located on the right side of the graph, but a value separating the bottom 10% will be located on the left side of the graph.</li>
+<li>A z score must be negative whenever it is located in the left half of the normal distribution.</li>
+<li>Areas (or probabilities) are always between 0 and 1, and they are never negative.</li>
+</ol>
+</div>
+<div id="examples-2" class="section level2">
+<h2><span class="header-section-number">6.17</span> Examples</h2>
+<ul>
+<li>The lifetime of a certain type of battery is normally distributed with a mean of 200 hours and a standard deviation of 15 hours. How long must a battery last to be in the top 5%?</li>
+<li>When designing equipment, one common criterion is to use a design that accommodates 95% of the population. We have seen that only 46% of women satisfy the height requirements for U.S. Air Force pilots. What would be the maximum acceptable height of a woman if the requirements were changed to allow the shortest 95% of women to be pilots? That is, find the 95th percentile of heights of women.
+Assume that heights of women are normally distributed with a mean of 63.7 in. and a standard deviation of 2.9 in.</li>
+</ul>
+</div>
+<div id="mixed-practice" class="section level2">
+<h2><span class="header-section-number">6.18</span> Mixed Practice</h2>
+<ul>
+<li>The shelf life of a particular dairy product is normally distributed with a mean of 12 days and a standard deviation of 3 days.
+<ul>
+<li>About what percent of the products last between 9 and 15 days?</li>
+<li>About what percent of the products last between 12 and 15 days?</li>
+<li>About what percent of the products last 6 days or less?</li>
+<li>About what percent of the products last 15 or more days?</li>
+</ul></li>
+<li>The speeds of cars on the highway have a mean of 95 km/h with a standard deviation of 5 km/h.
+<ul>
+<li>What percentage of cars averaged less than 85 km/h?</li>
+<li>If a police car stopped cars that were going more than 105 km/h, how many cars would they stop if there were 8000 cars on the highway?</li>
+</ul></li>
+<li>Scores of each of the previous English tests were normally distributed with a mean of 72 and standard deviation of 4.3. Gina will be taking the test tomorrow. What is the probability of Gina getting at least 61 on the test?</li>
+<li>Scores of each of the previous physics tests were normally distributed with a mean of 82 and standard deviation of 4.8. Ian will be taking the test tomorrow. What is the probability of Ian getting exactly 78 on the test (think back! No work is necessary. This one is tricky!)?</li>
+<li>Scores of each of the previous French tests were normally distributed with a mean of 74 and standard deviation of 2.7. Julie will be taking the test tomorrow. What is the probability of Julie getting at most 70 on the test?</li>
+</ul>
+</div>
+<div id="sampling-distributions-and-estimators" class="section level2">
+<h2><span class="header-section-number">6.19</span> Sampling Distributions and Estimators</h2>
+<ul>
+<li>We now consider the concept of a sampling distribution of a statistic. Instead of working with values from the original population, we want to focus on the values of statistics (such as sample proportions or sample means) obtained from the population.</li>
+<li>The sampling distribution of a statistic is the distribution of values taken by the statistic in <em>all possible samples</em> of the same size from the same population.</li>
+<li>The sampling distribution of a statistic (such as the sample mean or sample proportion) is the distribution of all values of the statistic when all possible samples of the same size n are taken from the same population. (The sampling distribution of a statistic is typically represented as a probability distribution in the format of a table, probability histogram, or formula.)</li>
+</ul>
+</div>
+<div id="general-behavior-of-sampling-distributions" class="section level2">
+<h2><span class="header-section-number">6.20</span> General Behavior of Sampling Distributions</h2>
+<ul>
+<li>When samples of the same size are taken from the same population, the following two properties apply:
+<ul>
+<li>Sample proportions tend to be normally distributed.</li>
+<li>The mean of sample proportions is the same as the population mean.</li>
+<li><span class="math inline">\(p=\)</span> population proportion; <span class="math inline">\(\hat{p}=\)</span> Sample Proportion.</li>
+</ul></li>
+<li>Example:
+<ul>
+<li><img src="6_pic6.png" /></li>
+<li><img src="6_pic7.png" /></li>
+<li><img src="6_pic11.png" /></li>
+<li><img src="6_pic12.png" /></li>
+<li><img src="6_pic8.png" /></li>
+<li><img src="6_pic9.png" /></li>
+<li><img src="6_pic10.png" /></li>
+</ul></li>
+</ul>
+</div>
+<div id="estimator" class="section level2">
+<h2><span class="header-section-number">6.21</span> Estimator</h2>
+<ul>
+<li>A statistic used to estimate a parameter is <em>unbiased</em> if the mean of its sampling distribution is equal to the true value of the parameter being estimated.</li>
+<li><strong>Unbiased Estimator</strong>: An unbiased estimator is a statistic that targets the value of the corresponding population parameter in the sense that the sampling distribution of the statistic has a mean that is equal to the corresponding population parameter. For example: <span class="math inline">\(\bar{x}\)</span>, <span class="math inline">\(\hat{p}\)</span>, and <span class="math inline">\(s^2\)</span></li>
+<li><strong>Biased Estimator</strong>: They do not target the value of the corresponding population parameter. For example: median, range, and <span class="math inline">\(s\)</span></li>
+</ul>
+</div>
+<div id="why-sample-with-replacement" class="section level2">
+<h2><span class="header-section-number">6.22</span> Why Sample with Replacement?</h2>
+<p>Sampling is conducted with replacement because of these two very important reasons:</p>
+<ol style="list-style-type: decimal">
+<li>When selecting a relatively small sample from a large population, it makes no significant difference whether we sample with replacement or without replacement.</li>
+<li>Sampling with replacement results in independent events that are unaffected by previous outcomes, and independent events are easier to analyze and result in simpler calculations and formulas.</li>
+</ol>
+</div>
+<div id="central-limit-theorem" class="section level2">
+<h2><span class="header-section-number">6.23</span> Central Limit Theorem</h2>
+<p>When n is sufficiently large, the sampling distribution of <span class="math inline">\(\bar{x}\)</span> is well approximated by a normal curve, even when the population distribution is not itself normal.
+CLT can safely be applied if n exceeds 30.</p>
+<p><span class="math display">\[\bar{x}\sim N(\mu,\frac{\sigma}{\sqrt{n}})\]</span></p>
+<p>Which means the mean of the sample mean is the same as the population mean, but the standard deviation (or Standard Error) of the sample mean is the population standard deviation divided by the squart root of the sample size.</p>
+<p><a href="http://onlinestatbook.com/stat_sim/sampling_dist/index.html">Sampling Distribution of the Mean</a></p>
+</div>
+<div id="practical-rules-for-real-applications-involving-a-sample-mean-x-bar" class="section level2">
+<h2><span class="header-section-number">6.24</span> Practical Rules for Real Applications Involving a Sample Mean x-bar</h2>
+<ul>
+<li>Requirements: Population has a normal distribution or <span class="math inline">\(n&gt;30\)</span>:
+<ul>
+<li>mean of the sample means: <span class="math inline">\(\mu_{\bar{x}}=\mu\)</span></li>
+<li>standard deviation (standard error) of the sample means: <span class="math inline">\(\sigma_{\bar{x}}=\frac{\sigma}{\sqrt{n}}\)</span></li>
+<li><span class="math inline">\(z\)</span> score conversion: <span class="math inline">\(\frac{\bar{x}-\mu}{\frac{\sigma}{\sqrt{n}}}\)</span></li>
+</ul></li>
+<li>Original population is not normally distributed and <span class="math inline">\(n\leq 30\)</span>: use other methods</li>
+</ul>
+</div>
+<div id="considerations-for-practical-problem-solving" class="section level2">
+<h2><span class="header-section-number">6.25</span> Considerations for Practical Problem Solving</h2>
+<ol style="list-style-type: decimal">
+<li>Check Requirements: When working with the mean from a sample, verify that the normal distribution can be used by confirming that the original population has a normal distribution or the sample size is <span class="math inline">\(n&gt;30\)</span>.</li>
+<li>Individual Value or Mean from a Sample?</li>
+</ol>
+</div>
+<div id="examples-3" class="section level2">
+<h2><span class="header-section-number">6.26</span> Examples</h2>
+<ul>
+<li>The elevator in the car rental building at San Francisco International Airport has a placard stating that the maximum capacity is “4000 lb - 27 passengers.” This converts to a mean passenger weight of 148 lb when the elevator is full. We will assume a worst-case scenario in which the elevator is filled with 27 adult males. Assume that adult males have weights that are normally distributed with a mean of 189 lb and a standard deviation of 39 lb.
+<ul>
+<li>Find the probability that 1 randomly selected adult male has a weight greater than 148 lb.</li>
+<li>Find the probability that a sample of 27 randomly selected adult males has a mean weight greater than 148 lb.</li>
+</ul></li>
+<li>The army reports that the distribution of head circumference among soldiers is approximately normal with mean 22.8 inches and standard deviation of 1.1 inches.
+<ul>
+<li>What is the probability that a randomly selected soldier’s head will have a circumference that is greater than 23.5 inches?</li>
+<li>What is the probability that a random sample of five soldiers will have an average head circumference that is greater than 23.5 inches?</li>
+</ul></li>
+<li>Penn State Fleet which operates and manages car rentals for Penn State employees found that the tire lifetime for their vehicles has a mean of 50,000 miles and standard deviation of 3500 miles. What would be the distribution, mean and standard error mean lifetime of a random sample of 50 vehicles?</li>
+</ul>
+</div>
+<div id="assessing-normality" class="section level2">
+<h2><span class="header-section-number">6.27</span> Assessing Normality</h2>
+<ol style="list-style-type: decimal">
+<li>Use graphs (dot plots, boxplots, or histograms )</li>
+<li>Use Q-Q plots</li>
+<li><img src="6_pic13.png" /></li>
+</ol>
+</div>
+<div id="example-17" class="section level2">
+<h2><span class="header-section-number">6.28</span> Example</h2>
+<p>Use the following dataset to check if it is normally distributed:</p>
+<pre><code>##  [1] 57 61 57 57 58 57 61 54 68 51 49 64 50 48 65 52 56 46 54 49 51 47 55
+## [24] 55 54 42 51 56 55 51 54 51 60 61 43 55 56 61 52 69 64 46 54</code></pre>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="probability-distributions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="confidence-intervals.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["Book.pdf", "Book.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
