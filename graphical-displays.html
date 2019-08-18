@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 11 \(\chi^2\) Test | Math 115: Elementary Statistics</title>
+  <title>Chapter 2 Graphical Displays | Math 115: Elementary Statistics</title>
   <meta name="description" content="These are the slides I use in class. Most of the materials are obtained from our textbook: Elementary Statistics 13th edition by Mario F. Triola., Prof. Homer White’s website from Geogetown College, and my AP Statistics lecture notes." />
   <meta name="generator" content="bookdown 0.12 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 11 \(\chi^2\) Test | Math 115: Elementary Statistics" />
+  <meta property="og:title" content="Chapter 2 Graphical Displays | Math 115: Elementary Statistics" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 11 \(\chi^2\) Test | Math 115: Elementary Statistics" />
+  <meta name="twitter:title" content="Chapter 2 Graphical Displays | Math 115: Elementary Statistics" />
   
   <meta name="twitter:description" content="These are the slides I use in class. Most of the materials are obtained from our textbook: Elementary Statistics 13th edition by Mario F. Triola., Prof. Homer White’s website from Geogetown College, and my AP Statistics lecture notes." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="linear-regression.html">
-
+<link rel="prev" href="index.html">
+<link rel="next" href="descriptive-statistics.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -410,483 +410,262 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="chi2-test" class="section level1">
-<h1><span class="header-section-number">Chapter 11</span> <span class="math inline">\(\chi^2\)</span> Test</h1>
-<div id="testing-categorical-variables-or-contingency-tables-chi2-test" class="section level2">
-<h2><span class="header-section-number">11.1</span> Testing Categorical Variables or Contingency Tables– <span class="math inline">\(\chi^2\)</span> Test</h2>
+<div id="graphical-displays" class="section level1">
+<h1><span class="header-section-number">Chapter 2</span> Graphical Displays</h1>
+<div id="frequency-distribution" class="section level2">
+<h2><span class="header-section-number">2.1</span> Frequency Distribution</h2>
 <ul>
-<li><strong>Goodness-of-Fit Test</strong>: A goodness-of-fit test is used to test the hypothesis that an observed frequency distribution fits (or conforms to) some claimed distribution.</li>
-<li>Conduct a goodness-of-fit test, which is a hypothesis test to determine whether a single row (or column) of frequency counts agrees with some specific distribution (such as uniform or normal).</li>
-<li>What if we are interested in seeing if a candy manufacture’s process actually produces equal amounts of each color. What can I do?</li>
-</ul>
-</div>
-<div id="chi-squared-test-chi2" class="section level2">
-<h2><span class="header-section-number">11.2</span> Chi-Squared Test (<span class="math inline">\(\chi^2\)</span>)</h2>
+<li><p><em>Frequency Distribution (or Frequency Table)</em>
+Shows how data are partitioned among several categories (or classes) by listing the categories along with the number (frequency) of data values in each of them.</p></li>
+<li>Definitions
 <ul>
-<li>Used to test the <strong>counts</strong> of categorical data<br />
+<li><em>Lower class limits:</em> The smallest numbers that can belong to each of the different classes</li>
+<li><em>Upper class limit:</em> The largest numbers that can belong to each of the different classes<br />
 </li>
-<li>Three Types
-<ul>
-<li>Goodness of fit (univariate)<br />
-</li>
-<li>Independence (bivariate)<br />
-</li>
-<li>Homogeneity (univerate with two samples)</li>
+<li><em>Class boundaries:</em> The numbers used to separate the classes, but without the gaps created by class limits</li>
+<li><em>Class midpoints:</em> The values in the middle of the classes Each class midpoint can be found by adding the lower class limit to the upper class limit and dividing the sum by 2.</li>
+<li><em>Class width:</em> The difference between two consecutive lower class limits in a frequency distribution.</li>
 </ul></li>
 </ul>
 </div>
-<div id="chi2-distribution" class="section level2">
-<h2><span class="header-section-number">11.3</span> <span class="math inline">\(\chi^2\)</span> Distribution</h2>
-<p><img src="Book_files/figure-html/unnamed-chunk-42-1.png" width="672" /></p>
-<ul>
-<li>Different <em>df</em> have different curves<br />
-</li>
-<li>Skewd to the right<br />
-</li>
-<li>As df increases, curve shifts toward right and becomes more like a normal curve.</li>
-</ul>
+<div id="procedure-for-constructing-a-frequency-distribution" class="section level2">
+<h2><span class="header-section-number">2.2</span> Procedure for Constructing a Frequency Distribution</h2>
+<ol style="list-style-type: decimal">
+<li>Select the number of classes, usually between 5 and 20. Calculate the class width. (Will be given on test)</li>
+<li>Calculate the class width. (<strong>round up the number</strong>)
+<span class="math display">\[\textrm{Class Width}\approx\frac{\textrm{max data value-min data value}}{\textrm{number of class}}\]</span></li>
+<li>Choose the value for the first lower class limit by using either the minimum value or a convenient value below the minimum.</li>
+<li>Using the first lower class limit and class width, list the other lower class limits.</li>
+<li>List the lower class limits in a vertical column and then determine and enter the upper class limits.</li>
+<li>Take each individual data value and put a tally mark in the appropriate class. Add the tally marks to get the frequency.</li>
+</ol>
 </div>
-<div id="chi2-assumptions" class="section level2">
-<h2><span class="header-section-number">11.4</span> <span class="math inline">\(\chi^2\)</span> Assumptions</h2>
-<ul>
-<li>SRS</li>
-<li>All expected counts are greater than or equal to 5</li>
-<li>Observations are mutually exclusive and independent.</li>
-</ul>
-</div>
-<div id="hypothesis-statetment-write-in-context" class="section level2">
-<h2><span class="header-section-number">11.5</span> Hypothesis Statetment: Write in Context</h2>
-<p><span class="math display">\[H_0: \textrm{The frequency counts agree with the claimed distribution}\\ H_A: \textrm{The frequency counts do not agree with the claimed distribution.
-} \]</span></p>
-<p>Or use math symbols:
-<span class="math display">\[H_{0}: p_1=p_2\cdots=p_n\\H_A: \textrm{At least one proportion is different from the others}\]</span>
-## <span class="math inline">\(\chi^2\)</span> formula
-<span class="math display">\[\chi^2=\sum\frac{(Observed-Expected)^2}{Expected}\]</span>
-or
-<span class="math display">\[\chi^2=\sum\frac{(O-E)^2}{E}\]</span></p>
-</div>
-<div id="first-case-chi2-goodness-of-fit-test" class="section level2">
-<h2><span class="header-section-number">11.6</span> First Case: <span class="math inline">\(\chi^2\)</span> Goodness-of-Fit Test</h2>
-<ul>
-<li>Uses univariate data<br />
-</li>
-<li>Want to see how well the observed counts fit what we expect the counts to be.</li>
-<li>df=number of categories-1</li>
-<li>Same procedures as hypothesis testings</li>
-</ul>
-</div>
-<div id="how-do-we-find-the-expected-counts" class="section level2">
-<h2><span class="header-section-number">11.7</span> How do we find the expected counts</h2>
-<ul>
-<li>If categories have the same proportion, use <span class="math inline">\(E=\frac{n}{k}\)</span>, where n is the total counts, and k is the number of categories.<br />
-</li>
-<li>If categories have different proportions, use <span class="math inline">\(E=np\)</span>, where n is the total counts, and p is the proportion for each category.</li>
-</ul>
-</div>
-<div id="example-34" class="section level2">
-<h2><span class="header-section-number">11.8</span> Example</h2>
-<p>Does your zodiac sign determine how successful you will be? Fortune magazine collected the zodiac signs of 256 heads of the largest 400 companies. Is there sufficient evidence to claim that successful people are more likely to be born under some signs than others?</p>
-<table style="width:100%;">
-<colgroup>
-<col width="6%" />
-<col width="7%" />
-<col width="7%" />
-<col width="7%" />
-<col width="7%" />
-<col width="7%" />
-<col width="7%" />
-<col width="7%" />
-<col width="7%" />
-<col width="7%" />
-<col width="7%" />
-<col width="7%" />
-<col width="7%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="center">Counts</th>
-<th align="center">Aries</th>
-<th align="center">Taurus</th>
-<th align="center">Gemini</th>
-<th align="center">Cancer</th>
-<th align="center">Leo</th>
-<th align="center">Virgo</th>
-<th align="center">Libra</th>
-<th align="center">Scorpio</th>
-<th align="center">Sagittarius</th>
-<th align="center">Capricorn</th>
-<th align="center">Aquarius</th>
-<th align="center">Pisces</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="center">Observed</td>
-<td align="center">23</td>
-<td align="center">20</td>
-<td align="center">18</td>
-<td align="center">23</td>
-<td align="center">18</td>
-<td align="center">21</td>
-<td align="center">19</td>
-<td align="center">22</td>
-<td align="center">20</td>
-<td align="center">19</td>
-<td align="center">24</td>
-<td align="center">29</td>
-</tr>
-<tr class="even">
-<td align="center">Expected</td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-</tbody>
-</table>
-<p>How many would you expect in each sign if there were no difference between them? How many degrees of freedom?</p>
-<ul>
-<li>Assumptions
-<ul>
-<li>SRS</li>
-<li>All expected counts <span class="math inline">\(\geq 5\)</span></li>
-<li>The number of CEO’s born under each zodiac sign is mutually exculsive and independent</li>
-</ul></li>
-<li><p>Hypothesis Statement</p>
-<ul>
-<li><span class="math display">\[H_0: \text{The number of CEO&#39;s born under each sign is the same}\\H_A:\text{The number of CEO&#39;s born under each sign is different} \]</span></li>
-</ul></li>
-<li>Calculation:
-<ul>
-<li>Traditional Way:
-<span class="math display">\[ \chi^2=\sum\frac{(O-E)^2}{E}=\frac{(23-21.3)^2}{21.3}+\frac{(20-21.3)^2}{21.3}+\cdots +\frac{(29-21.3)^2}{21.3}=5.094\]</span></li>
-</ul></li>
-</ul>
-<p>Use the p-value method( Always use the <strong>right-tail</strong> test)</p>
-<pre><code>##       Aries      Taurus      Gemini      Cancer         Leo       Virgo 
-##          23          20          18          23          18          21 
-##       Libra     Scorpio Sagittarius   Capricorn    Aquarius      Pisces 
-##          19          22          20          19          24          29</code></pre>
-<pre><code>## Chi-squared test for given probabilities 
-## 
-##             Observed counts Expected by Null Contr to chisq stat
-## Aries                    23             21.3                0.13
-## Taurus                   20             21.3                0.08
-## Gemini                   18             21.3                0.52
-## Cancer                   23             21.3                0.13
-## Leo                      18             21.3                0.52
-## Virgo                    21             21.3                0.01
-## Libra                    19             21.3                0.26
-## Scorpio                  22             21.3                0.02
-## Sagittarius              20             21.3                0.08
-## Capricorn                19             21.3                0.26
-## Aquarius                 24             21.3                0.33
-## Pisces                   29             21.3                2.76
-## 
-## 
-## Chi-Square Statistic = 5.09 
-## Degrees of Freedom of the table = 11 
-## P-Value = 0.926</code></pre>
-<p><img src="Book_files/figure-html/unnamed-chunk-43-1.png" width="672" /></p>
-<ul>
-<li>Conclusion
-<ul>
-<li>Since p-value&gt;<span class="math inline">\(\alpha\)</span>, I fail to reject to <span class="math inline">\(H_0\)</span>. There is not sufficient evidence to suggest that the number of CEO’s born under each sign is different.</li>
-</ul></li>
-</ul>
-</div>
-<div id="example-35" class="section level2">
-<h2><span class="header-section-number">11.9</span> Example</h2>
-<p>A company says its premium mixture of nuts contains 10% Brazil nuts, 20% cashews, 20% almonds, 10% hazelnuts and 40% peanuts. You buy a large can and separate the nuts. Upon weighing them, you find there are 112 g Brazil nuts, 183 g of cashews, 207 g of almonds, 71 g or hazelnuts, and 446 g of peanuts. You wonder whether your mix is significantly different from what the company advertises? Why is the chi-square goodness-of-fit test <strong>NOT</strong> appropriate here?</p>
-</div>
-<div id="example-36" class="section level2">
-<h2><span class="header-section-number">11.10</span> Example</h2>
-<ul>
-<li>Offspring of certain fruit flies may have yellow or ebony bodies and normal wings or short wings. Genetic theory predicts that these traits will appear in the ratio 9:3:3:1(yellow &amp; normal, yellow &amp; short, ebony &amp; normal, ebony &amp; short) A researcher checks 100 such flies and finds the distribution of traits to be 59, 20, 11, and 10, respectively.
-<ul>
-<li>What are the expected counts?<br />
-</li>
-<li>df?</li>
-</ul></li>
-</ul>
-<p>Are the results consistent with the theoretical distribution predicted by the genetic model?</p>
-</div>
-<div id="example-37" class="section level2">
-<h2><span class="header-section-number">11.11</span> Example</h2>
-<ul>
-<li>According to Benford’s law, many data sets have the property that the leading (first) digits follow the distribution shown in the first two rows of the table below. The bottom row lists the frequencies of leading digits of Internet traffic inter-arrival times. Do the frequencies in the bottom row fit the distribution according to Benford’s Law?
-<ul>
-<li><img src="11_1.png" /></li>
-</ul></li>
-</ul>
-</div>
-<div id="contingency-table" class="section level2">
-<h2><span class="header-section-number">11.12</span> Contingency Table</h2>
-<ul>
-<li><strong>Contingency Table</strong>: A contingency table (or two-way frequency table) is a table consisting of frequency counts of categorical data corresponding to two different variables. (One variable is used to categorize rows, and a second variable is used to categorize columns.)</li>
-<li><strong>Test of Independence</strong>: In a test of independence, we test the null hypothesis that in a contingency table, the row and column variables are independent. (That is, there is no dependency between the row variable and the column variable.)</li>
-</ul>
-</div>
-<div id="chi2-test-for-independence" class="section level2">
-<h2><span class="header-section-number">11.13</span> <span class="math inline">\(\chi^2\)</span> test for independence</h2>
-<ul>
-<li>Used with categorical, bivariate data from ONE sample</li>
-<li>Used to see if the two categorical variables are associated (dependent) or not associated (independent).</li>
-<li>Assumptions &amp; formula remain the same!</li>
-<li>Hypothesis Statement - written in words
-<span class="math display">\[H_0:\text{Two variables are independent}\\ H_A:\text{Two variables are dependent}\]</span></li>
-</ul>
-<p>Be sure to write in context!</p>
-</div>
-<div id="example-38" class="section level2">
-<h2><span class="header-section-number">11.14</span> Example</h2>
-<p>A beef distributor wishes to determine whether there is a relationship between geographic region and cut of meat preferred. If there is no relationship, we will say that beef preference is independent of geographic region. Suppose that, in a random sample of 500 customers, 300 are from the North and 200 from the South. Also, 150 prefer cut A, 275 prefer cut B, and 75 prefer cut C.<br />
-Based on the information, we can make a table like this:</p>
+<div id="example" class="section level2">
+<h2><span class="header-section-number">2.3</span> Example</h2>
 <table>
 <thead>
 <tr class="header">
-<th></th>
-<th>North</th>
-<th>South</th>
-<th>Total</th>
+<th>Time(Seconds)</th>
+<th>Frquency</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Cut A</td>
-<td>90</td>
-<td>60</td>
-<td>150</td>
+<td>75-124</td>
+<td>11</td>
 </tr>
 <tr class="even">
-<td>Cut B</td>
-<td>165</td>
-<td>110</td>
-<td>275</td>
+<td>125-174</td>
+<td>24</td>
 </tr>
 <tr class="odd">
-<td>Cut C</td>
-<td>45</td>
-<td>30</td>
-<td>75</td>
+<td>175-224</td>
+<td>10</td>
 </tr>
 <tr class="even">
-<td>Total</td>
-<td>300</td>
-<td>200</td>
-<td>500</td>
+<td>225-274</td>
+<td>3</td>
+</tr>
+<tr class="odd">
+<td>275-324</td>
+<td>2</td>
 </tr>
 </tbody>
 </table>
-<ul>
-<li>Find the expected counts.</li>
-<li><p>Better Way to find the Extected Counts
-<span class="math display">\[E=\frac{\text{row total}\cdot \text{column total}}{\text{grand total}}\]</span></p></li>
-<li><p>Degrees of freedom
-<span class="math display">\[df=(r-1)(c-1)\]</span></p></li>
-</ul>
-<p>Where r is the number rows, c is the number of column. <strong>Ignore the row for the total and the column for the total</strong>. Or cover up one row and one column then count the number of cells remaining!</p>
+<p>How do we get this table? Below is the dataset of McDonald’s Lunch Drive-Through Service Time from a sample:</p>
+<p><img src="Mcdonalds.png" /></p>
 </div>
-<div id="example-continued" class="section level2">
-<h2><span class="header-section-number">11.15</span> Example: Continued</h2>
-<p>Suppose the observe vaules for the question above is below:</p>
-<table>
-<thead>
-<tr class="header">
-<th></th>
-<th>North</th>
-<th>South</th>
-<th>Total</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Cut A</td>
-<td>100</td>
-<td>50</td>
-<td>150</td>
-</tr>
-<tr class="even">
-<td>Cut B</td>
-<td>150</td>
-<td>125</td>
-<td>275</td>
-</tr>
-<tr class="odd">
-<td>Cut A</td>
-<td>50</td>
-<td>25</td>
-<td>75</td>
-</tr>
-<tr class="even">
-<td>Total</td>
-<td>300</td>
-<td>200</td>
-<td>500</td>
-</tr>
-</tbody>
-</table>
-<p>Is there sufficient evidence to suggest that geographic regions and beef preference are not independent?</p>
+<div id="relative-frequency-distribution" class="section level2">
+<h2><span class="header-section-number">2.4</span> Relative Frequency Distribution</h2>
 <ul>
-<li>Assumptions
-<ul>
-<li>SRS<br />
+<li>Relative Frequency Distribution or Percentage Frequency Distribution: Each class frequency is replaced by a relative frequency (or proportion) or a percentage<br />
+<span class="math display">\[\textrm{Relative Frequency for a class}=\frac{\textrm{frequency for a class}}{\textrm{sum of all frequencies}}\]</span><br />
 </li>
-<li>All expected <span class="math inline">\(\geq 5\)</span></li>
-</ul></li>
-<li><p>Hypothesis Statement
-<span class="math display">\[H_0: \text{Geographic regions and beef preference are independent}\\ H_A: \text{Geographic regions and beef preference are not independent}\]</span></p></li>
-<li><p>Calculation</p></li>
-</ul>
-<pre><code>##       North South
-## Cut A   100    50
-## Cut B   150   125
-## Cut C    50    25</code></pre>
-<pre><code>## Pearson&#39;s Chi-squared test 
-## 
-## Observed Counts:
-##       North South
-## Cut A   100    50
-## Cut B   150   125
-## Cut C    50    25
-## 
-## Counts Expected by Null:
-##       North South
-## Cut A    90    60
-## Cut B   165   110
-## Cut C    45    30
-## 
-## Contributions to the chi-square statistic:
-##       North South
-## Cut A  1.11  1.67
-## Cut B  1.36  2.05
-## Cut C  0.56  0.83
-## 
-## 
-## Chi-Square Statistic = 7.58 
-## Degrees of Freedom of the table = 2 
-## P-Value = 0.0226</code></pre>
-<p><img src="Book_files/figure-html/unnamed-chunk-45-1.png" width="672" /></p>
-<ul>
-<li>Interpretation
-<ul>
-<li>Since p-value&lt;<span class="math inline">\(\alpha\)</span>, I reject <span class="math inline">\(H_0\)</span>. There is sufficient evidence to suggest that geographic regions and beef preference are not independent.</li>
-</ul></li>
+<li>Percentage Frequency: just convert the above to percent.</li>
+<li>The sum of the percentages in a relative frequency distribution must be very close to 100% (with a little wiggle room for rounding errors).</li>
 </ul>
 </div>
-<div id="example-39" class="section level2">
-<h2><span class="header-section-number">11.16</span> Example</h2>
-<p><img src="11_2.png" /></p>
-</div>
-<div id="chi2-test-of-homogenity" class="section level2">
-<h2><span class="header-section-number">11.17</span> <span class="math inline">\(\chi^2\)</span> Test of Homogenity</h2>
+<div id="cumulative-frequency-distribution" class="section level2">
+<h2><span class="header-section-number">2.5</span> Cumulative Frequency Distribution</h2>
 <ul>
-<li>A <span class="math inline">\(\chi^2\)</span> test of homogeneity is a test of the claim that different populations have the same proportions of some characteristics.</li>
-<li>Assumptions &amp; formula remain the same!</li>
-<li>Expected counts &amp; df are found the same way as test for independence.</li>
-<li>Only change is the hypotheses!</li>
-<li>Hypothesis Statement - written in words
-<span class="math display">\[H_0:\text{The distributions are the same}\\ H_A:\text{The distributions are different}\]</span></li>
+<li><em>Cumulative Frequency Distribution:</em> The frequency for each class is the sum of the frequencies for that class and all previous classes.</li>
 </ul>
-<p>Be sure to write in context!</p>
+<p><img src="Mcdonalds_cumul.png" /></p>
 </div>
-<div id="example-40" class="section level2">
-<h2><span class="header-section-number">11.18</span> Example</h2>
-<p>The following data is on drinking behavior for independently chosen random samples of male and female students. Does there appear to be a gender difference with respect to drinking behavior? (Note: low = 1-7 drinks/wk, moderate = 8-24 drinks/wk, high = 25 or more drinks/wk)</p>
-<table>
-<thead>
-<tr class="header">
-<th></th>
-<th>Men</th>
-<th>Women</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>None</td>
-<td>140</td>
-<td>186</td>
-</tr>
-<tr class="even">
-<td>Low</td>
-<td>478</td>
-<td>661</td>
-</tr>
-<tr class="odd">
-<td>Moderate</td>
-<td>300</td>
-<td>173</td>
-</tr>
-<tr class="even">
-<td>High</td>
-<td>63</td>
-<td>16</td>
-</tr>
-</tbody>
-</table>
+<div id="cumulative-relative-frequence" class="section level2">
+<h2><span class="header-section-number">2.6</span> Cumulative Relative Frequence</h2>
 <ul>
-<li>Assumptions
-<ul>
-<li>SRS<br />
-</li>
-<li>All expected <span class="math inline">\(\geq 5\)</span></li>
-</ul></li>
-<li><p>Hypothesis Statement
-<span class="math display">\[H_0: \text{Ther is no gender difference with respect to drinking behavior}\\ H_A: \text{There is gender difference with respect to drinking behavior} \]</span></p></li>
-<li><p>Calculation</p></li>
+<li>Simply divide the cumulative frequency by the total frequency.</li>
+<li>If we plot the cumulative relative frequency, the plot is called the Ogive</li>
 </ul>
-<pre><code>##          Men Women
-## None     140   186
-## Low      478   661
-## Moderate 300   173
-## High      63    16</code></pre>
-<pre><code>## Pearson&#39;s Chi-squared test 
-## 
-## Observed Counts:
-##          Men Women
-## None     140   186
-## Low      478   661
-## Moderate 300   173
-## High      63    16
-## 
-## Counts Expected by Null:
-##            Men Women
-## None     158.6 167.4
-## Low      554.0 585.0
-## Moderate 230.1 242.9
-## High      38.4  40.6
-## 
-## Contributions to the chi-square statistic:
-##            Men Women
-## None      2.17  2.06
-## Low      10.42  9.87
-## Moderate 21.27 20.14
-## High     15.72 14.89
-## 
-## 
-## Chi-Square Statistic = 96.5 
-## Degrees of Freedom of the table = 3 
-## P-Value = 0</code></pre>
-<p><img src="Book_files/figure-html/unnamed-chunk-47-1.png" width="672" /></p>
+<p><img src="Book_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+</div>
+<div id="using-frequency-distributions-to-understand-data" class="section level2">
+<h2><span class="header-section-number">2.7</span> Using Frequency Distributions to Understand Data</h2>
+<p>We can roughly identify the distribution of a dataset using the frequency distribution. However, the more convinent way to do so is to use a historgram, which we will discuss later.</p>
+</div>
+<div id="gaps" class="section level2">
+<h2><span class="header-section-number">2.8</span> Gaps</h2>
 <ul>
-<li>Conclusion
+<li>The presence of gaps can show that the data are from two or more different populations.</li>
+<li>However, the converse is not true, because data from different populations do not necessarily result in gaps.</li>
+</ul>
+</div>
+<div id="what-do-gaps-tell-us" class="section level2">
+<h2><span class="header-section-number">2.9</span> What Do Gaps Tell Us?</h2>
+<p>The table shown is a frequency distribution of the weights (grams) of randomly selected pennies.<br />
+<img src="gap.png" /></p>
 <ul>
-<li>Since p-value&lt;<span class="math inline">\(\alpha\)</span>, I reject <span class="math inline">\(H_0\)</span>. There is sufficient evidece to suggest that there is gender difference with respect to drinking behavior.</li>
+<li>Pennies made before 1983 are 95% copper and 5% zinc.</li>
+<li>Pennies made after 1983 are 2.5% copper and 97.5% zinc.</li>
+</ul>
+</div>
+<div id="histogram" class="section level2">
+<h2><span class="header-section-number">2.10</span> Histogram</h2>
+<ul>
+<li><strong>Histogram:</strong> A graph consisting of bars of equal width drawn adjacent to each other (unless there are gaps in the data). The horizontal scale represents classes of quantitative data values, and the vertical scale represents frequencies. The heights of the bars correspond to frequency values.</li>
+</ul>
+</div>
+<div id="important-uses-of-a-histogram" class="section level2">
+<h2><span class="header-section-number">2.11</span> Important Uses of a Histogram</h2>
+<ul>
+<li>Visually displays the shape of the distribution of the data</li>
+<li>Shows the location of the center of the data</li>
+<li>Shows the spread of the data</li>
+<li>Identifies outliers</li>
+</ul>
+</div>
+<div id="example-of-a-histogram" class="section level2">
+<h2><span class="header-section-number">2.12</span> Example of A Histogram</h2>
+<ul>
+<li><em>Relative Frequency Histogram:</em> It has the same shape and horizontal scale as a histogram, but the vertical scale is marked with relative frequencies instead of actual frequencies.
+<img src="histogram.png" /></li>
+</ul>
+</div>
+<div id="interpreting-histograms" class="section level2">
+<h2><span class="header-section-number">2.13</span> Interpreting Histograms</h2>
+<ul>
+<li><p>Explore the data by analyzing the histogram to see what can be learned about “CVDOT”:</p>
+<ul>
+<li>the Center of the data,</li>
+<li>the Variation,</li>
+<li>the shape of the Distribution,</li>
+<li>whether there are any Outliers,</li>
+<li>and Time. (if possible)</li>
 </ul></li>
 </ul>
 </div>
-<div id="practice-4" class="section level2">
-<h2><span class="header-section-number">11.19</span> Practice</h2>
-<p><img src="11_3.png" /></p>
-<p><img src="11_4.png" /></p>
+<div id="common-distribution-shapes" class="section level2">
+<h2><span class="header-section-number">2.14</span> Common Distribution Shapes</h2>
+<p><img src="shapes.png" /></p>
+</div>
+<div id="assessing-normality-with-normal-quantile-plots-q-q-plots" class="section level2">
+<h2><span class="header-section-number">2.15</span> Assessing Normality with Normal Quantile Plots (Q-Q plots)</h2>
+<ul>
+<li>Criteria for Assessing Normality with a Normal Quantile Plot
+<ul>
+<li>Normal Distribution: The pattern of the points in the normal quantile plot is reasonably close to a straight line, and the points do not show some systematic pattern that is not a straight-line pattern.</li>
+<li>Not a Normal Distribution: The population distribution is not normal if the normal quantile plot has either or both of these two conditions:
+<ul>
+<li>The points do not lie reasonably close to a straight-line pattern.</li>
+<li>The points show some systematic pattern that is not a straight-line pattern. (going up and down around the line)</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+<div id="examples-of-q-q-plots" class="section level2">
+<h2><span class="header-section-number">2.16</span> Examples of Q-Q plots</h2>
+<p><img src="normal_QQ.png" /></p>
+<p>Normal Distribution: The points are reasonably close to a straight-line pattern, and there is no other systematic pattern that is not a straight-line pattern.</p>
+<hr />
+<p><img src="not_normal_QQ_1.png" /></p>
+<p>Not a Normal Distribution: The points do not lie reasonably close to a straight line.</p>
+<p><img src="not_normal_QQ_2.png" /></p>
+<p>Not a Normal Distribution: The points show a systematic pattern that is not a straight-line pattern.</p>
+</div>
+<div id="dotplots" class="section level2">
+<h2><span class="header-section-number">2.17</span> Dotplots</h2>
+<ul>
+<li>A graph of quantitative data in which each data value is plotted as a point (or dot) above a horizontal scale of values. Dots representing equal values are stacked.</li>
+</ul>
+<p><img src="dot.png" /></p>
+<ul>
+<li>Features of a Dotplot
+<ul>
+<li>Displays the shape of distribution of data.</li>
+<li>It is usually possible to recreate the original list of data values.</li>
+</ul></li>
+</ul>
+</div>
+<div id="stemplots-you-need-to-assign-a-key-to-read-a-stem-plot" class="section level2">
+<h2><span class="header-section-number">2.18</span> Stemplots (You need to assign a key to read a stem plot)</h2>
+<p>Represents quantitative data by separating each value into two parts: the stem (such as the leftmost digit) and the leaf (such as the rightmost digit).
+<img src="stem.png" /></p>
+<ul>
+<li>Features of a Stemplot
+<ul>
+<li>Shows the shape of the distribution of the data.</li>
+<li>Retains the original data values.</li>
+<li>The sample data are sorted (arranged in order).</li>
+</ul></li>
+</ul>
+</div>
+<div id="bar-graph" class="section level2">
+<h2><span class="header-section-number">2.19</span> Bar Graph</h2>
+<p>Shows the relative distribution of categorical data so that it is easier to compare the different categories.</p>
+</div>
+<div id="pareto-chart" class="section level2">
+<h2><span class="header-section-number">2.20</span> Pareto Chart</h2>
+<p>A Pareto chart is a bar graph for categorical data, with the added stipulation that the bars are arranged in descending order according to frequencies, so the bars decrease in height from left to right.</p>
+<ul>
+<li>Features of a Pareto Chart
+<ul>
+<li>Shows the relative distribution of categorical data so that it is easier to compare the different categories.</li>
+<li>Draws attention to the more important categories.</li>
+</ul></li>
+</ul>
+<p><img src="pareto.png" /></p>
+</div>
+<div id="pie-charts" class="section level2">
+<h2><span class="header-section-number">2.21</span> Pie Charts</h2>
+<p>A very common graph that depicts categorical data as slices of a circle, in which the size of each slice is proportional to the frequency count for the category; Shows the distribution of categorical data in a commonly used format.
+<img src="pie.png" /></p>
+</div>
+<div id="frequency-polygon" class="section level2">
+<h2><span class="header-section-number">2.22</span> Frequency Polygon</h2>
+<ul>
+<li>A graph using line segments connected to points located directly above class midpoint values</li>
+<li>A frequency polygon is very similar to a histogram, but a frequency polygon uses line segments instead of bars.
+<img src="polygon.png" /></li>
+</ul>
+</div>
+<div id="graphs-that-deceive" class="section level2">
+<h2><span class="header-section-number">2.23</span> Graphs That Deceive</h2>
+<p><img src="wrong_graph_1.png" /></p>
+</div>
+<div id="pictographs" class="section level2">
+<h2><span class="header-section-number">2.24</span> Pictographs</h2>
+<ul>
+<li>By using pictographs, artists can create false impressions that grossly distort differences by using these simple principles of basic geometry:
+<ul>
+<li>When you double each side of a square, its area doesn’t merely double; it increases by a factor of four.</li>
+<li>When you double each side of a cube, its volume doesn’t merely double; it increases by a factor of eight.
+<img src="picto.png" /></li>
+</ul></li>
+</ul>
+<p><img src="picto_wrong.png" /></p>
+</div>
+<div id="scatterplot-two-numerical-variables" class="section level2">
+<h2><span class="header-section-number">2.25</span> Scatterplot (Two Numerical Variables)</h2>
+<p><img src="scatter.png" /></p>
+</div>
+<div id="nba" class="section level2">
+<h2><span class="header-section-number">2.26</span> NBA</h2>
+<ul>
+<li><img src="James_Harden.jpg" /></li>
+<li><img src="Lebron_James.jpg" /></li>
+<li><img src="Steph_Curry.jpg" /></li>
+</ul>
 
 </div>
 </div>
@@ -895,8 +674,8 @@ Based on the information, we can make a table like this:</p>
           </div>
         </div>
       </div>
-<a href="linear-regression.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="descriptive-statistics.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
